@@ -9,7 +9,7 @@ class App {
 	public function __construct()
 	{
 		$url = $this->parseURL();
-		var_dump($url);
+		// var_dump($url);
 		// exit();
 		
 		//cek controller
@@ -18,7 +18,7 @@ class App {
 			unset($url[0]);
 		}
 		echo "<br>";
-		var_dump($url);
+		// var_dump($url);
 
 		require_once '../app/controllers/' . $this->controller . '.php';
 		$this->controller = new $this->controller;
