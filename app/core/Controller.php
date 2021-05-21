@@ -10,7 +10,7 @@ class Controller {
 	public function model ($nama_model)
 	{
 		require_once '../app/models/' .$nama_model . '.php';
-		return new $nama_model; // harus diinstansiasi 
+		return new $nama_model; 
 	}
 
 }
