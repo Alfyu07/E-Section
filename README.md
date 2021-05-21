@@ -1,1 +1,1 @@
-SQL masih pakai yang di YouTube ^^
+Role belum diseleksi (belum buat fungsi seleksi)
