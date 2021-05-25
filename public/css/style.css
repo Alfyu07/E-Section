@@ -136,14 +136,15 @@ body{
 	display: block;
 }
 
-.dropdownbuatan-content a{
-	font-size: 13px;
-	margin-top: 8px;
+.dropdown-menu a{
+	font-size: 15px;
+	/* margin-top: px; */
     color: #BE4C4C;
+	font-weight: bolder;
 }
 
-.dropdownbuatan-content a:hover{
-    color: #BE4C4C
+.dropdown-menu a:hover{
+    color: red
 }
 .dropdownbuatan a{
 	font-size: 13px;
