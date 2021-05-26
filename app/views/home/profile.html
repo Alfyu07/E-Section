@@ -1,74 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>profile</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script type="javascript">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="javascript">
             $('a[data-toggle="tab"]').on('shown.bs.tab', function (event) {
                 event.target // newly activated tab
                 event.relatedTarget // previous active tab
-              })
+            })
         </script>
-        <style>
-            .circle{
-                background-color: aliceblue;
-                width: 250px;
-                height: 250px;
-                align-items: center;
-                border-radius: 50%;
-                border: 3px solid #BE4C4C;
-                margin-top: 125px;
-                margin-left: 40%;
-            }
-        </style>
+    <style>
+        .circle {
+            background-color: aliceblue;
+            width: 250px;
+            height: 250px;
+            align-items: center;
+            border-radius: 50%;
+            border: 3px solid #BE4C4C;
+            margin-top: 125px;
+            margin-left: 40%;
+        }
+
+        .nav-item:active,
+        .nav-item:hover {
+            background-color: #FEA5A5;
+        }
+
+        .active {
+            background-color: #EEEEEE !important;
+            border-color: #BE4C4C !important;
+        }
+    </style>
 </head>
-<body>
+
+<body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 250px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
         <div class="circle">
-        
+
         </div>
     </div>
     <br>
-    <h5 style="margin-top: 125px; margin-left: -3%; font-weight: bolder; text-align: center; color: #BE4C4C;">
-        Sarah Kartika
-    </h5>
-    <h7 style="margin-top: 125px; margin-left:700px; text-align: center; color: #BE4C4C;">
-        @Sarah_33
-    </h7>
+    <div style="margin-top: 125px; margin-left: -3%; font-weight: bolder; text-align: center; color: #BE4C4C;">
+        <h5>
+            Sarah Kartika
+        </h5>
+        <h7>
+            @Sarah_33
+        </h7>
+    </div>
     <div class="container" style="width: 800px; margin-bottom: 5%;">
-        <nav>
-            <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-link active" id="profile" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true" style="border:3px solid#BE4C4C;">Profile</a>
-                <a class="nav-link" id="tes" data-toggle="tab" href="#tes" role="tab" aria-controls="tes" aria-selected="false" style="border:3px solid#BE4C4C;">Tes</a>
-            </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent" >
-            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile" style="border:3px solid#BE4C4C;">
-                <div class="container" style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px;">
-                    <p3>Nama</p3>
+        <ul class="nav nav-tabs" style="background-color: #EEEEEE; width: fit-content;">
+            <li class="nav-item">
+                <a class="nav-link active" data-toggle="tab" href="#profile" style="color: #BE4C4C">PROFILE</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="tab" href="#tes" style="color: #BE4C4C">TES</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile"
+                style="border:2px solid#BE4C4C;">
+                <div class="container"
+                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px; background-color: white;">
+                    <h6>Nama</h6>
                 </div>
-                <div class="container" style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px;">
+                <div class="container"
+                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px; background-color: white;">
                     <p3>Tanggal Lahir</p3>
                 </div>
-                <div class="container" style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px;">
+                <div class="container"
+                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px; background-color: white;">
                     <p3>Email</p3>
                 </div>
-                <div class="container" style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px;;">
+                <div class="container"
+                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px; background-color: white;">
                     <p3>No Hp</p3>
                 </div>
             </div>
-            <div class="tab-pane fade " id="tes" role="tabpanel" aria-labelledby="tes" style="border:3px solid#BE4C4C;">
-                <div class="container" style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 10px 10px 10px 10px;">
-
+            <div class="tab-pane fade " id="tes" role="tabpanel" aria-labelledby="tes"
+                style="border:2px solid#BE4C4C; background-color: #EEEEEE;">
+                <div class="container"
+                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 10px 10px 10px 10px; background-color: white;">
                 </div>
             </div>
         </div>
     </div>
-    
 </body>
+
 </html>
