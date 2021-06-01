@@ -1,6 +1,35 @@
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="<?= BASEURL; ?>/js/bootstrap.js"></script>
-<script src="<?= BASEURL; ?>/js/script.js"></script>
-</body>
-</html>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="navbar nav-footer navbar-expand">
+            <!-- NAV-MENU -->
+            <div class="navbar" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link" href="#" style="margin-top: -5px">© 2021 e-section.com </a>
+                    </div>
+                    <div class="nav-item" style="margin-left: 800px;">
+                        <a class="nav-link" href="#" style="margin-top: -5px; margin-bottom: 10px;">About</a>
+                        <h7 style="color: #BE4C4C;">Follow us</h7>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#" style="margin-top: -5px">Contact</a>
+                        <a class="nav-link" href="#" style="margin-top: -5px">
+                            <img src="<?=BASEURL?>/img/facebook.png" style="height: 20px;"></a>
+                    </div>
+                </div>
+                <div class="nav-item">
+                    <a class="nav-link" href="#" style="margin-top: -5px">Policy</a>
+                    <a class="nav-link" href="#" style="margin-top: -5px">
+                        <img src="<?=BASEURL?>/img/twitter.png" style="height: 20px">
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <p> </p>
+                    <a class="nav-link" href="#" style="margin-top: -5px">
+                        <img src="<?=BASEURL?>/img/instagram.png" style="height: 20px">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</footer>

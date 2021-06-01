@@ -14,8 +14,21 @@ class M_Auth {
 		$email = $data['email'];
 		$password = $data['password'];
 		$tgl = $data['tahun']."-".$data['bulan']."-".$data['tanggal'];
-		$que = "INSERT INTO user VALUES ('$uname','', '$email', '$password', '$tgl', 1)";
-		$this->koneksi->exec($que);
+		$umur = $this->hitung_umur($tgl);
+		if($umur>=18){
+			//dewasa
+			$role = 2;
+		}
+		else if($umur>=13){
+			$role = 3;
+		}
+		else{
+			$role = 4;
+		}
+		$que = "INSERT INTO user VALUES ('$uname', '', '$email', '$password', '$tgl', $role)";
+		$hasil = $this->koneksi->exec($que);
+		// $num = mysqli_num_rows($hasil);
+		return $hasil;
 	}
 
 	public function valid($data){
@@ -23,8 +36,33 @@ class M_Auth {
 		$password = $data['password'];
 		$que = "SELECT * FROM user where password = '$password' and uname = '$uname'";
 		$hasil = $this->koneksi->exec($que);
+		$row = mysqli_fetch_all($hasil);
+		$umur = $this->hitung_umur($row[0][4]);
+		if($umur>=18){
+			//dewasa
+			$role = 2;
+		}
+		else if($umur>=13){
+			$role = 3;
+		}
+		else{
+			$role = 4;
+		}
+		if($role!=$row[0][4]){
+			$que = "UPDATE user SET id_role=$role WHERE uname='". $row[0][0]."'";
+			$this->koneksi->exec($que);
+		}
 		$num = mysqli_num_rows($hasil);
-		return $num;
+		return $que;
 	}
 
+	function hitung_umur($tanggal_lahir){
+		$tanggal_lahir = new DateTime($tanggal_lahir);
+		$sekarang = new DateTime("today");
+		if ($tanggal_lahir > $sekarang) { 
+		$thn = "0";
+		}
+		$thn = $sekarang->diff($tanggal_lahir)->y;
+		return $thn;
+	}
 }

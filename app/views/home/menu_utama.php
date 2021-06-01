@@ -1,41 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Menu Utama</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <style>
-        .d-flex {
-            height: 450px;
-            background-color: #FEA5A5;
-            margin: 0px;
-            align-items: left;
-        }
-
-        .row {
-            margin: 30px 0px 10px 0px;
-        }
-
-        .col-sm {
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-
-        .card {
-            margin: 10px 0px 20px 0px;
-        }
-
-        .p1 {
-            font-size: 14px;
-            align-items: left;
-            color: #4E3B3B;
-        }
-    </style>
-</head>
-
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2">
         <div class="container" style="margin-top: 9%; margin-left: 5%; height: 300px; width: 800px; float: left;">
@@ -48,7 +10,7 @@
             </p1>
         </div>
         <div class="container" style=" margin-left: 30%; float: right;">
-            <img src="/public/img/logo.png" style="width: 595px; height: 382px;">
+            <img src="<?=BASEURL?>/img/logo.png" style="width: 595px; height: 382px;">
         </div>
     </div>
     <br>
@@ -63,7 +25,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Apa Itu
                             Bullying?
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/Bully.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="Card image cap">
                     </div>
                 </div>
                 <div class="col-sm">
@@ -71,7 +33,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Pubertas
                             Pada Perempuan
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/pg.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Remaja/pg.jpg" alt="Card image cap">
                     </div>
                 </div>
             </div>
@@ -80,14 +42,14 @@
             <br>
             <h4 style="font-weight: bold; text-align: center;">Cek Artikel-Artikel Terbaru</h4>
             <div class="row">
-                <img src="/public/video/Anak/family.jpg" style="float: left; width: 300px; height: auto;">
+                <img src="<?=BASEURL?>/video/Anak/family.jpg" style="float: left; width: 300px; height: auto;">
                 <button class="btn btn-dark" href="#"
                     style="color: black; background-color: white; text-align: center; height: min-content; margin: 65px 0 0 20px;">
                     Ragam Keluarga
                 </button>
             </div>
             <div class="row">
-                <img src="/public/video/Anak/Teasing.jpg" style="float: left; width: 300px; height: auto;">
+                <img src="<?=BASEURL?>/video/Anak/Teasing.jpg" style="float: left; width: 300px; height: auto;">
                 <button class="btn btn-dark" href="#"
                     style="color: black; background-color: white; text-align: center; height: min-content; margin: 65px 0 0 20px;">
                     Ragam Keluarga
@@ -96,9 +58,4 @@
         </div>
     </div>
 
-
-
-
 </body>
-
-</html>

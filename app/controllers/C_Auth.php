@@ -10,26 +10,22 @@ class C_Auth extends Controller {
 		$this->view('templates/footer');
 	}
 
-	public function login(){
-		$data['judul'] = 'Login';
-		$this->view('templates/header', $data);
-		$this->view('Auth/Login',$data);
-		$this->view('templates/footer');
-	}
-
 	public function validasi(){
-		$data['judul'] = 'Masuk';
-		if ($this->model("M_Auth")->valid($_POST)>0){
-			echo "berhasil";
-		}else {
-			echo "gagal";
-		}
-
-		$this->view('templates/header', $data);
-		$this->view('home/index');
-		$this->view('templates/footer');
+		// if ($this->model("M_Auth")->valid($_POST)>0){
+		// 	header("location: ".BASEURL."/C_Auth/home");
+		// }else {
+		// 	echo "<script>alert('Password atau Username Anda Salah')</script>";
+		// 	header("location: ".BASEURL);
+		// }
+		echo $this->model("M_Auth")->valid($_POST);
 	}
 
+	public function home(){
+		$this->view('templates/header');
+		$this->view('home/menu_utama');
+		$this->view('templates/footer');
+	}
+	
 	public function register(){
 		$data['judul'] = 'Register';
 
@@ -38,14 +34,14 @@ class C_Auth extends Controller {
 		$this->view('templates/footer');
 	}
 
-	public function tambah(){
+	public function regist(){
 		$data['judul'] = 'Register';
-
-		$this->model("M_Auth")->regist($_POST);
-
-		$this->view('templates/header', $data);
-		$this->view('Auth/Login',$data);
-		$this->view('templates/footer');
+		if($this->model("M_Auth")->regist($_POST)){
+			header("location: ".BASEURL);
+		}
+		else{
+			header("location: ".BASEURL."/C_Auth/register");
+		}
 	}
 
 	public function hapus($id){

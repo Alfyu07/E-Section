@@ -1,24 +1,19 @@
-<div class="container">
-        <div class="row centered-form">
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
-        	<div class="panel panel-default">
-        		<div class="panel-heading">
-			    		<h3 class="panel-title">SIGN IN!</h3>
-			 			</div>
-			 			<div class="panel-body">
-			    		<form role="form" method="post" action="<?= BASEURL?>/C_Auth/validasi">
-		    				
-	    					<div class="form-group">
-								<input type="text" name="uname" id="uname" class="form-control input-sm" placeholder="Username">
-	    					</div>
-	    					<div class="form-group">
-								<input type="password" name="password" id="password" class="form-control input-sm" placeholder="password">
-	    					</div>  			
-			    			<input type="submit" value="Login" class="btn btn-info btn-block">
-			    		
-			    		</form>
-			    	</div>
-	    		</div>
-    		</div>
-    	</div>
+<body style="font-family: 'Raleway', sans-serif">
+    <div class="login-box">
+        <h1 style="text-align: center; font-size: 22px; margin-top: -21%; margin-bottom: 80px;">Selamat Datang Kembali
+        </h1>
+        <form action="<?=BASEURL?>/C_Auth/validasi" method="post">
+            <label style="font-size: 12px; text-align: left; margin-left: 6%; font-weight: bolder;">Username</label><br>
+            <div class="login"><input type="text" name="uname" placeholder="Username"></div>
+            <label style="font-size: 12px; text-align: left; margin-left: 6%; font-weight: bolder;">Password</label><br>
+            <div class="login"><input type="Password" name="password" placeholder="Password"></div>
+            <input type="submit" name="submit" value="Login" style="margin-bottom: 80px;">
+            
+            <h style="margin-left:-20px; font-size: 12px; ">Belum Punya Akun ?</h>
+            <a href="<?=BASEURL?>/C_Auth/Register">Daftar</a>
+        </form>
     </div>
+    <div class="float-right">
+        <img src="<?=BASEURL?>/img/login.png" style=" width: 600px; height: 400px;">
+    </div>
+</body>
