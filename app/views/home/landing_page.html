@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
     <style>
         .d-flex {
             height: 450px;
@@ -64,34 +64,53 @@
     </div>
     <br>
 
-    <div class="row">
+    <div class="row" style="width: auto; height: auto;">
+        <div class="col-sm"
+            style="border: solid #FEA5A5; border-radius: 50px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <h1 style="text-align: center; font-size: 22px; margin-top: 150px;">
+                Siapakah Diri Anda ?
+            </h1>
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-danger"
+                    style="background-color: #BE4C4C; width: 20rem; margin-bottom: 20px;">Masuk
+                    Sebagai Admin</button>
+            </div>
+            <div class="dropdown-divider" style="border-color: #BE4C4C;"></div>
+            <div class="row justify-content-center">
+                <button type="button" class="btn btn-danger"
+                    style="background-color: #BE4C4C; width: 20rem;margin-bottom: 20px;">Masuk
+                    Sebagai User</button>
+            </div>
+        </div>
         <div class="col-sm" style="background-color: #FEA5A5;">
             <br>
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <h1 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel edukasi yang
+                        <h4 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel edukasi yang
                             bertujuan untuk mengenalkan dan mengajarkan anak-anak tentang pubertas
-                            dan hubungan sehat</h1>
+                            dan hubungan sehat</h4>
                         <br>
                         <img class="d-block w-100" src="/public/video/Anak/Bully.jpg" alt="First slide">
+                        <br>
                     </div>
                     <div class="carousel-item">
-                        <h1 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel
+                        <h4 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel
                             edukasi yang bertujuan untuk mengenalkan dan mengajarkan
                             Remaja tentang pubertas dan hubungan sehat Reproduksi,
-                            hubungan sehat, dan kesehatan mental</h1>
+                            hubungan sehat, dan kesehatan mental</h4>
                         <br>
                         <img class="d-block w-100" src="/public/video/Remaja/tubuh.jpg" alt="Second slide">
+                        <br>
                     </div>
                     <div class="carousel-item">
-                        <h1 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel
+                        <h4 style="text-align: center;">E-Section menyediakan serangkaian video dan artikel
                             edukasi yang bertujuan untuk mengenalkan dan mengajarkan
                             Orang Dewasa tentang reproduksi, hubungan sehat,
-                            kesehatan mental, dan kontrasepsi</h1>
+                            kesehatan mental, dan kontrasepsi</h4>
                         <br>
                         <img class="d-block w-100" src="/public/video/Dewasa/contra.jpg" alt="Third slide">
-
+                        <br>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -104,9 +123,8 @@
                 </a>
             </div>
         </div>
-
     </div>
-
+    <br>
 
     <script src="/public/js/bootstrap.js"></script>
 
