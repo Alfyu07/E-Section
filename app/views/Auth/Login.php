@@ -1,3 +1,37 @@
+<head>
+    <title>navbar</title>
+    <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/style.css">
+	<link rel="stylesheet" href="<?php echo BASEURL; ?>/css/bootstrap.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        .d-flex {
+            height: 450px;
+            background-color: #FEA5A5;
+            margin: 0px;
+            align-items: left;
+        }
+
+        .row {
+            margin: 30px 0px 10px 0px;
+        }
+
+        .col-sm {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+
+        .card {
+            margin: 10px 0px 20px 0px;
+        }
+
+        .p1 {
+            font-size: 14px;
+            align-items: left;
+            color: #4E3B3B;
+        }
+    </style>
+</head>
 <body style="font-family: 'Raleway', sans-serif">
     <div class="login-box">
         <h1 style="text-align: center; font-size: 22px; margin-top: -21%; margin-bottom: 80px;">Selamat Datang Kembali

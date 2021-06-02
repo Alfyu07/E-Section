@@ -2,10 +2,13 @@
 <html>
 
 <head>
-    <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="/public/css/style.css">
+    <title>Sign Up</title>>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/style.css">
+	<link rel="stylesheet" href="<?php echo BASEURL; ?>/css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+</head>
 </head>
 
 <body style="font-family: 'Raleway', sans-serif">

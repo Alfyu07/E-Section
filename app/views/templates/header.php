@@ -52,7 +52,7 @@
                         Search
                     </button>
                 </form>
-                <!-- <li class="nav-item" style=" margin-left: 200px;">
+                <li class="nav-item" style=" margin-left: 200px;">
                     <a class="nav-link" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
                         LOG IN
                     </a>
@@ -61,7 +61,7 @@
                     <a class="nav-link" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
                         SIGN IN
                     </a>
-                </li> -->
+                </li>
             </ul>
         </div>
     </nav>

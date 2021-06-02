@@ -53,7 +53,7 @@ class M_Auth {
 			$this->koneksi->exec($que);
 		}
 		$num = mysqli_num_rows($hasil);
-		return $que;
+		return $num;
 	}
 
 	function hitung_umur($tanggal_lahir){
