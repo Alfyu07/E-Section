@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <style>
         .d-flex {
-            height: 450px;
+            /* height: 450px; */
             background-color: #FEA5A5;
             margin: 0px;
             align-items: left;
@@ -27,7 +27,11 @@
         .card {
             margin: 10px 0px 20px 0px;
         }
-
+        #navbar1 .navbar-nav{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
         .p1 {
             font-size: 14px;
             align-items: left;
@@ -38,31 +42,36 @@
 
 <body style="font-family: 'Raleway', sans-serif;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="height: 65px;"">
-        <a class=" navbar-brand" href="#"><img src="<?=BASEURL?>/img/logo.png" style="width: 80px; margin: 4px 12px;"></a>
+        <a class="navbar-brand" href="#"><img src="<?=BASEURL?>/img/logo.png" style="width: 80px; margin: 4px 12px;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1"
             aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class=" collapse navbar-collapse" id="navbar1">
-            <ul class="navbar-nav mr-auto">
-                <form class="form-inline my-2 my-lg-0">
+        <ul class="navbar-nav ">
+            <li class="nav-item" style="margin-left: 25%">
+                <form class="form-inline my-2">
                     <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search"
-                        style="margin-left: 350px; width:350px">
-                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">
+                        style="width:350px">
+                    <button class="btn btn-outline-danger" type="submit">
                         Search
                     </button>
                 </form>
-                <li class="nav-item" style=" margin-left: 200px;">
-                    <a class="nav-link" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
+            </li>
+            <div class="d-flex" style="background-color: transparent;">
+                <li class="nav-item ">
+                    <a class="nav-link py-1 mt-2" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
                         LOG IN
                     </a>
+                
                 </li>
-                <li class="nav-item" style=" margin-left: 50px;">
-                    <a class="nav-link" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
+                <li class="nav-item">
+                    <a class="nav-link py-1 mt-2" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
                         SIGN IN
                     </a>
                 </li>
-            </ul>
+            </div>
+        </ul>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 30px; background-color: #BE4C4C !important">

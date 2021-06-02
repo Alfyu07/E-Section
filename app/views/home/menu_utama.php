@@ -1,4 +1,3 @@
-<body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2">
         <div class="container" style="margin-top: 9%; margin-left: 5%; height: 300px; width: 800px; float: left;">
             <h1 style="text-align: left; font-size: 30px; font-weight: bold;">TENTANG E-SECTION
@@ -13,14 +12,34 @@
             <img src="<?=BASEURL?>/img/logo.png" style="width: 595px; height: 382px;">
         </div>
     </div>
-    <br>
-
+    
     <div class="row">
         <div class="col-sm" style="background-color: #FEA5A5;">
             <br>
             <h4 style=" text-align: center; font-weight: bolder;">Cek Video-Video Terbaru</h4>
-            <div class="row">
-                <div class="col-sm" style="float: left;">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active"> 
+                    <a class="link" href="#">
+                        <img class="d-block w-100" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="First slide">
+                    </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a class="link" href="#">
+                            <img class="d-block w-100" src="<?=BASEURL?>/video/Remaja/pg.jpg" alt="Second slide">
+                        </a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+                <!-- <div class="col-sm-5">
                     <div class="card">
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Apa Itu
                             Bullying?
@@ -28,30 +47,31 @@
                         <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="Card image cap">
                     </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-sm-6">
                     <div class="card">
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Pubertas
                             Pada Perempuan
                         </a>
                         <img class="card-img-top" src="<?=BASEURL?>/video/Remaja/pg.jpg" alt="Card image cap">
                     </div>
-                </div>
-            </div>
+                </div> -->
+            <br>
         </div>
+
         <div class="col-sm-4" style="background-color: #FEA5A5; margin-right: 70px;">
             <br>
             <h4 style="font-weight: bold; text-align: center;">Cek Artikel-Artikel Terbaru</h4>
             <div class="row">
-                <img src="<?=BASEURL?>/video/Anak/family.jpg" style="float: left; width: 300px; height: auto;">
+                <img src="<?=BASEURL?>/video/Anak/family.jpg" style=" width: 250px;">
                 <button class="btn btn-dark" href="#"
-                    style="color: black; background-color: white; text-align: center; height: min-content; margin: 65px 0 0 20px;">
+                    style="color: black; background-color: white; text-align: center; height: min-content; margin: 50px 0 0 20px;">
                     Ragam Keluarga
                 </button>
             </div>
             <div class="row">
-                <img src="<?=BASEURL?>/video/Anak/Teasing.jpg" style="float: left; width: 300px; height: auto;">
+                <img src="<?=BASEURL?>/video/Anak/Teasing.jpg" style=" width: 250px;">
                 <button class="btn btn-dark" href="#"
-                    style="color: black; background-color: white; text-align: center; height: min-content; margin: 65px 0 0 20px;">
+                    style="color: black; background-color: white; text-align: center; height: min-content; margin: 50px 0 0 20px;">
                     Ragam Keluarga
                 </button>
             </div>

@@ -4,7 +4,7 @@ class C_Auth extends Controller {
 
 	public function index(){
 		$data['judul'] = 'Welcome!';
-		$this->view('templates/header', $data);
+		$this->view('templates/nav', $data);
 		$this->view('home/menu_utama');
 		$this->view('templates/footer');
 	}

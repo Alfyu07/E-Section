@@ -17,7 +17,6 @@ class App {
 			$this->controller = $url[0];
 			unset($url[0]);
 		}
-		echo "<br>";
 		// var_dump($url);
 
 		require_once '../app/controllers/' . $this->controller . '.php';
