@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>Menu Remaja</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <style>
-        .btn.btn-primary {
-            background-color: #be4c4c;
-            border-color: #eeeeee;
-        }
-
-        p.card-text {
-            font-weight: bold;
-        }
-    </style>
-</head>
-
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 450px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
         <div class="container" style="margin-top: 9%; margin-left: 5%; height: 300px; width: 400px; float: left;">
-            <h1 style="text-align: left; font-size: 30px;">MENU REMAJA
+            <h1 style="text-align: left; font-size: 30px;">MENU DEWASA
             </h1>
             <p1 style="font-size: 14px; align-items: left;">
                 E-Section menyediakan serangkaian video dan artikel
                 edukasi yang bertujuan untuk mengenalkan dan mengajarkan
-                Remaja tentang pubertas dan hubungan sehat Reproduksi,
-                hubungan sehat, dan kesehatan mental
+                Orang Dewasa tentang reproduksi, hubungan sehat,
+                kesehatan mental, dan kontrasepsi
             </p1>
         </div>
         <div class="container" style="margin-right: 20%; height: 300px; width: 400px; float: right;">
-            <img src="/public/img/A2.png" style="width: auto; height: 400px;">
+            <img src="<?= BASEURL?>/img/A3.png" style="width: auto; height: 400px;">
         </div>
     </div>
     <br>
@@ -42,32 +24,29 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Reproduksi
-                            dan
-                            Kehamilan
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Aborsi
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/hamil.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/abo.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">Kehamilan</a>
+                                <a class="btn btn-primary" href="#" role="button">Aborsi</a>
                                 <a class="btn btn-primary" href="#" role="button">Reproduksi</a>
                             </p>
                         </div>
                     </div>
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Pubertas
-                            pada
-                            Laki-Laki
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">kontrasepsi
+
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/pb.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/contra.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">Pubertas</a>
-                                <a class="btn btn-primary" href="#" role="button">Laki-Laki</a>
+                                <a class="btn btn-primary" href="#" role="button">Reproduksi</a>
+                                <a class="btn btn-primary" href="#" role="button">kontrasepsi</a>
                             </p>
                         </div>
                     </div>
@@ -75,31 +54,29 @@
                 </div>
                 <div class="col-sm">
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Pubertas
-                            pada
-                            Perempuan
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Mengontrol
+                            Kesuburan dengan Hormon
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/pg.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/fh.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">Pubertas</a>
+                                <a class="btn btn-primary" href="#" role="button">Hormon</a>
                                 <a class="btn btn-primary" href="#" role="button">Perempuan</a>
                             </p>
                         </div>
                     </div>
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Melukai
-                            Diri
-                            Sendiri
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Konsen,
+                            Pelecehan, dan Kekerasan Seksual
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/sf.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/sa.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">kesehatan Mental</a>
+                                <a class="btn btn-primary" href="#" role="button">Keselamatan Diri</a>
                             </p>
                         </div>
                     </div>
@@ -107,30 +84,32 @@
                 </div>
                 <div class="col-sm">
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Hubungan
-                            Tidak
-                            Sehat
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Tips Untuk
+                            Seks
+                            Aman & Mencegah Kehamilan
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/toxic.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/ss.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
+                                <a class="btn btn-primary" href="#" role="button">Reproduksi</a>
+                                <a class="btn btn-primary" href="#" role="button">Kontrasepsi</a>
                             </p>
                         </div>
                     </div>
                     <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Merawat
-                            Tubuh
-                            Selama Pubertas
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Mencegah
+                            STD
+
                         </a>
-                        <img class="card-img-top" src="/public/video/Remaja/tubuh.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?= BASEURL?>/video/Dewasa/std.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <p p class="card-text">
                                 Tag:
                                 <br>
-                                <a class="btn btn-primary" href="#" role="button">Pubertas</a>
+                                <a class="btn btn-primary" href="#" role="button">Penyakit</a>
+                                <a class="btn btn-primary" href="#" role="button">Kontrasepsi</a>
                             </p>
                         </div>
                     </div>

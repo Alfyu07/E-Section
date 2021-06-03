@@ -48,12 +48,21 @@ class M_Auth {
 		else{
 			$role = 4;
 		}
-		if($role!=$row[0][4]){
+		if($role!=$row[0][5] && $row[0][5]!=1){
 			$que = "UPDATE user SET id_role=$role WHERE uname='". $row[0][0]."'";
 			$this->koneksi->exec($que);
 		}
+		$_SESSION['uname']=$row[0][0];
+		$_SESSION['id_role']=$row[0][5];
 		$num = mysqli_num_rows($hasil);
 		return $num;
+	}
+
+	function get_role($id){
+		$que = "SELECT * FROM user where uname = '$id'";
+		$hasil = $this->koneksi->exec($que);
+		$row = mysqli_fetch_all($hasil);
+		return $row[0][5];
 	}
 
 	function hitung_umur($tanggal_lahir){

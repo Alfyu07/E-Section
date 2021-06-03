@@ -12,7 +12,7 @@
             /* height: 450px; */
             background-color: #FEA5A5;
             margin: 0px;
-            align-items: left;
+            align-items: right;
         }
 
         .row {
@@ -49,7 +49,7 @@
         </button>
         <div class=" collapse navbar-collapse" id="navbar1">
         <ul class="navbar-nav ">
-            <li class="nav-item" style="margin-left: 25%">
+            <!-- <li class="nav-item" style="margin-left: 25%">
                 <form class="form-inline my-2">
                     <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search"
                         style="width:350px">
@@ -57,33 +57,33 @@
                         Search
                     </button>
                 </form>
-            </li>
-            <div class="d-flex" style="background-color: transparent;">
-                <li class="nav-item ">
-                    <a class="nav-link py-1 mt-2" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
-                        LOG IN
+            </li> -->
+            <!-- <div class="d-flex" style="background-color: transparent;"> -->
+                <li class="nav-item">
+                    <a href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
+                        
                     </a>
-                
+            <!-- GATAU GIMANA RAPIHINNYA :) -->
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link py-1 mt-2" href="#" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
-                        SIGN IN
+                    <a href="<?=BASEURL?>/C_Auth/login" style="color: #BE4C4C; font-weight: bold; font-size: 20px;">
+                        GET STARTED
                     </a>
                 </li>
-            </div>
+            <!-- </div> -->
         </ul>
         </div>
     </nav>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="height: 30px; background-color: #BE4C4C !important">
-        <a class="navbar-brand" href="#"></a>
+        <!-- <a class="navbar-brand" href="#"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> -->
 
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <!-- <ul class="navbar-nav mr-auto">
                     <li class="nav-item dropdown" style="padding-right: 400px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -137,7 +137,7 @@
                             <a href="#" style="left: 60%;">Dewasa</a> <br>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </nav>

@@ -1,24 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Menu Anak</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <style>
-        .btn.btn-primary {
-            background-color: #be4c4c;
-            border-color: #eeeeee;
-        }
-
-        p.card-text {
-            font-weight: bold;
-        }
-    </style>
-</head>
-
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 450px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
         <div class="container" style="margin-top: 9%; margin-left: 5%; height: 300px; width: 400px; float: left;">
@@ -31,25 +10,116 @@
             </p1>
         </div>
         <div class="container" style="margin-top: 5%;  margin-right: 10%; height: 300px; width: 400px; float: right;">
-            <img src="/public/img/A1.png" style="width: 300px; height: 300px;">
+            <img src="<?=BASEURL?>/img/A1.png" style="width: 300px; height: 300px;">
         </div>
     </div>
     <br>
     <div class="container" style="margin-left: 10%;">
-        <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
+        <form action="<?=BASEURL?>/C_Admin/add_konten/<?= $data['id_role']?>" method="get">
+            <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
+        </form>
     </div>
     <br>
     <div class="d-flex p-2"
         style="background-color: #EEEEEE; align-items: left; margin-left: 10%; margin-right:  10%; margin-bottom: 5%;">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <?php 
+                    $num = $data['jum'];
+                    $i=1;
+                    foreach($data['isi'] as $row):
+                        if($i%3 == 1){
+                            echo "<div class='col-sm'>";
+                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                            '.$row['judul'].'
+                        </a>
+                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
+                        <div class="card-body" style="background-color: #FEA5A5;">
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                                EDIT
+                            </button>
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                                DELETE
+                            </button>
+                            <br>
+                            <p p class="card-text">
+                                Tag:
+                                <br />
+                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                            </p>
+                        </div>
+                    </div>';
+                            if($i==$num){
+                                echo "</div> <br>";
+                            }
+                        }
+                        else if($i%3==2  && $i!=$num){
+                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                            Apa Itu
+                            Bullying?
+                        </a>
+                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
+                        <div class="card-body" style="background-color: #FEA5A5;">
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                                EDIT
+                            </button>
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                                DELETE
+                            </button>
+                            <br>
+                            <p p class="card-text">
+                                Tag:
+                                <br />
+                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                            </p>
+                        </div>
+                    </div>';
+                            if($i==$num){
+                                echo "</div> <br>";
+                            }
+                        }
+                        else if($i%3==0 || $i==$num){
+                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
+                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                            Apa Itu
+                            Bullying?
+                        </a>
+                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
+                        <div class="card-body" style="background-color: #FEA5A5;">
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                                EDIT
+                            </button>
+                            <button class="btn btn-danger" type="button"
+                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                                DELETE
+                            </button>
+                            <br>
+                            <p p class="card-text">
+                                Tag:
+                                <br />
+                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                            </p>
+                        </div>
+                    </div>';
+                            echo "</div> ";
+                        }
+                        $i++;
+                    endforeach;
+                ?>
+                <!-- <div class="col-sm">
                     <div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Apa Itu
                             Bullying?
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/Bully.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -71,7 +141,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             AmanBerinternet
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/Video.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Video.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -93,7 +163,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Membantu Dari Bully Dengan Aman
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/help.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/help.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -118,7 +188,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Penolakan
                             Terjadi Pada Semua Orang
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/rejection.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/rejection.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -140,7 +210,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Sedih dan
                             Senang
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/SH.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/SH.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -162,7 +232,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Menyelesaikan Konflik
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/Conflict.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Conflict.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -186,7 +256,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Apa Itu Gender?
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/gender.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/gender.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -208,7 +278,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Candaan
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/Teasing.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Teasing.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -230,7 +300,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                             Ragam Keluarga
                         </a>
-                        <img class="card-img-top" src="/public/video/Anak/family.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/family.jpg" alt="Card image cap">
                         <div class="card-body" style="background-color: #FEA5A5;">
                             <button class="btn btn-danger" type="button"
                                 style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
@@ -248,11 +318,10 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>
     </div>
 </body>
 
-</html>

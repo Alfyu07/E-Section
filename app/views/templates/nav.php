@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>navbar</title>
+    <title><?= $_SESSION['id_role'];?></title>
     <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/style.css">
 	<link rel="stylesheet" href="<?php echo BASEURL; ?>/css/bootstrap.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         .d-flex {
             /* height: 450px; */
@@ -37,7 +39,14 @@
             align-items: left;
             color: #4E3B3B;
         }
-        
+        .btn.btn-primary {
+            background-color: #be4c4c;
+            border-color: #eeeeee;
+        }
+
+        p.card-text {
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -69,7 +78,7 @@
                     <a href="#" style="left: 60%;">Profile</a> <br>
                     <div class="dropdown-divider"></div>
                     <img src="<?=BASEURL?>/img/logout.png" width="50px" >
-                    <a href="#" style="left: 60%;">Log Out</a> <br>
+                    <a href="<?=BASEURL?>/C_User/logout" style="left: 60%;">Log Out</a> <br>
                 </div>
             </li>
         </ul>
@@ -93,13 +102,13 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="#" style="left: 60%;">Anak</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
-                            <a href="#" style="left: 60%;">Remaja</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="#" style="left: 60%;">Dewasa</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/2" style="left: 60%;">Dewasa</a> <br>
                         </div>
                     </li>
 
