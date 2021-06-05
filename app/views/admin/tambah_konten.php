@@ -16,7 +16,7 @@
                         <div class="card" style="width: 20rem;">
                             <img class="card-img-top" src="<?=BASEURL?>/img/addfoto.jpg" alt="Add Foto">
                             <div class="card-body">
-                                <input type="file" name="upload">
+                                <input type="file" name="upload" required>
                             </div>
                         </div>
                     </div>
@@ -57,8 +57,8 @@
                         </tr>
                     </tbody>
                 </table>
-                <button type="button" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
-                <button type="button" class="btn btn-danger" style="background-color: #BE4C4C;">DELETE</button>
+                <!-- <button type="button" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
+                <button type="button" class="btn btn-danger" style="background-color: #BE4C4C;">DELETE</button> -->
                 <br>
                 <div class="row justify-content-center">
                     <button type="submit" name="submit" class="btn btn-danger"

@@ -23,304 +23,229 @@
     <div class="d-flex p-2"
         style="background-color: #EEEEEE; align-items: left; margin-left: 10%; margin-right:  10%; margin-bottom: 5%;">
         <div class="container">
-            <div class="row">
-                <?php 
-                    $num = $data['jum'];
-                    $i=1;
-                    foreach($data['isi'] as $row):
-                        if($i%3 == 1){
-                            echo "<div class='col-sm'>";
-                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            '.$row['judul'].'
-                        </a>
-                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                            </p>
+            <?php 
+                $num = $data['jum'];
+                $i=1;
+                foreach($data['isi'] as $row):
+                    if($i%3 == 1){
+                        echo "<div class='row'>";
+                        echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        '.$row['judul'].'
+                    </a>
+                    <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <div class="btn">
+                            <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'">EDIT</a>
                         </div>
-                    </div>';
-                            if($i==$num){
-                                echo "</div> <br>";
-                            }
-                        }
-                        else if($i%3==2  && $i!=$num){
-                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Apa Itu
-                            Bullying?
-                        </a>
-                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                            </p>
+                        <div class="btn">
+                            <a onclick="return confirm('."'"."Apakah Anda yakin?"."'".');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/delete_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
                         </div>
-                    </div>';
-                            if($i==$num){
-                                echo "</div> <br>";
-                            }
-                        }
-                        else if($i%3==0 || $i==$num){
-                            echo '<div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Apa Itu
-                            Bullying?
-                        </a>
-                        <img class="card-img-top" src='.BASEURL.'/video/Anak/Bully.jpg alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                            </p>
-                        </div>
-                    </div>';
-                            echo "</div> ";
-                        }
-                        $i++;
-                    endforeach;
-                ?>
-                <!-- <div class="col-sm">
-                    <div class="card" style="width: 20rem; margin: 30px 1px 0px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Apa Itu
-                            Bullying?
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                            </p>
-                        </div>
+                        <br>
+                        <p class="card-text">
+                            Tag:
+                            <br/>
+                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                        </p>
                     </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            AmanBerinternet
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Video.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Keselamatan diri</a>
-                            </p>
+                </div>';
+                        if($i==$num){
+                            echo "</div>";
+                        }
+                    }
+                    else if($i%3==2){
+                        echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        '.$row['judul'].'
+                    </a>
+                    <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <div class="btn">
+                            <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >EDIT</a>
                         </div>
+                        <div class="btn">
+                            <a onclick="return confirm('.'"Apakah Anda yakin?"'.');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
+                        </div>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                        </p>
                     </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Membantu Dari Bully Dengan Aman
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/help.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                                <a class="btn btn-primary" href="#" role="button">Keselamatan Diri</a>
-                            </p>
+                </div>';
+                        if($i==$num){
+                            echo "</div>";
+                        }
+                    }
+                    else if($i%3==0 || $i==$num){
+                        echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        '.$row['judul'].'
+                    </a>
+                    <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <div class="btn">
+                            <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >EDIT</a>
                         </div>
+                        <div class="btn">
+                            <a onclick="return confirm('.'"Apakah Anda yakin?"'.');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
+                            border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
+                        </div>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
+                        </p>
+                    </div>
+                </div>';
+                        echo "</div>";
+                    }
+                    $i+=1;
+                endforeach;
+            ?>
+            <!-- <div class="row">
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Penolakan
+                        Terjadi Pada Semua Orang
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/rejection.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Penolakan
-                            Terjadi Pada Semua Orang
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/rejection.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Sedih dan
-                            Senang
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/SH.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Intrapersonal</a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Menyelesaikan Konflik
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Conflict.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
-                            </p>
-                        </div>
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Sedih dan
+                        Senang
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/SH.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Intrapersonal</a>
+                        </p>
                     </div>
                 </div>
-                <div class="col-sm">
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Apa Itu Gender?
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/gender.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Intrapersonal</a>
-                            </p>
-                        </div>
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        Menyelesaikan Konflik
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Conflict.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
+                        </p>
                     </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Candaan
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Teasing.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
-                            </p>
-                        </div>
+                </div>
+            </div> -->
+            <!-- <div class="col-sm">
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        Apa Itu Gender?
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/gender.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Intrapersonal</a>
+                        </p>
                     </div>
-                    <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                        <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
-                            Ragam Keluarga
-                        </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/family.jpg" alt="Card image cap">
-                        <div class="card-body" style="background-color: #FEA5A5;">
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
-                                EDIT
-                            </button>
-                            <button class="btn btn-danger" type="button"
-                                style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
-                                DELETE
-                            </button>
-                            <br>
-                            <p p class="card-text">
-                                Tag:
-                                <br />
-                                <a class="btn btn-primary" href="#" role="button">Keluarga</a>
-                            </p>
-                        </div>
+                </div>
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        Candaan
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Teasing.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Hubungan Sehat</a>
+                        </p>
                     </div>
-                </div> -->
-            </div>
-
+                </div>
+                <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
+                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                        Ragam Keluarga
+                    </a>
+                    <img class="card-img-top" src="<?=BASEURL?>/video/Anak/family.jpg" alt="Card image cap">
+                    <div class="card-body" style="background-color: #FEA5A5;">
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%;  margin: -15px 0px 0px 40px; float: left;">
+                            EDIT
+                        </button>
+                        <button class="btn btn-danger" type="button"
+                            style="background-color: white; color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 30%; margin: -15px 40px 0px 0px; float: right">
+                            DELETE
+                        </button>
+                        <br>
+                        <p p class="card-text">
+                            Tag:
+                            <br />
+                            <a class="btn btn-primary" href="#" role="button">Keluarga</a>
+                        </p>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
 </body>
