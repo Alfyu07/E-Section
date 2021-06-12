@@ -1,7 +1,18 @@
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 450px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
         <div class="container" style="margin-top: 9%; margin-left: 5%; height: 300px; width: 400px; float: left;">
-            <h1 style="text-align: left; font-size: 30px;">MENU ANAK-ANAK
+            <h1 style="text-align: left; font-size: 30px;">
+                Menu <?php 
+                if($data['id_role']==2){
+                    echo "Dewasa";
+                }
+                else if($data['id_role']==3){
+                    echo "Remaja";
+                }
+                else if($data['id_role']==4){
+                    echo "Anak-anak";
+                }
+                ?>
             </h1>
             <p1 style="font-size: 14px; align-items: left;">
                 E-Section menyediakan serangkaian video dan artikel
@@ -46,9 +57,12 @@
                         <br>
                         <p class="card-text">
                             Tag:
-                            <br/>
-                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                        </p>
+                            <br/>';
+                            $tag = explode('/', $row['tag']);
+                            for($j = 0; $j < count($tag); $j++){
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                            }
+                        echo '</p>
                     </div>
                 </div>';
                         if($i==$num){
@@ -71,11 +85,14 @@
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
                         </div>
                         <br>
-                        <p p class="card-text">
+                        <p class="card-text">
                             Tag:
-                            <br />
-                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                        </p>
+                            <br/>';
+                            $tag = explode('/', $row['tag']);
+                            for($j = 0; $j < count($tag); $j++){
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                            }
+                        echo '</p>
                     </div>
                 </div>';
                         if($i==$num){
@@ -98,11 +115,14 @@
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
                         </div>
                         <br>
-                        <p p class="card-text">
+                        <p class="card-text">
                             Tag:
-                            <br />
-                            <a class="btn btn-primary" href="#" role="button">Bullying</a>
-                        </p>
+                            <br/>';
+                            $tag = explode('/', $row['tag']);
+                            for($j = 0; $j < count($tag); $j++){
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                            }
+                        echo '</p>
                     </div>
                 </div>';
                         echo "</div>";
