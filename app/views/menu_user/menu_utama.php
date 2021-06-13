@@ -44,7 +44,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Apa Itu
                             Bullying?
                         </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/4/Bully.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Anak/Bully.jpg" alt="Card image cap">
                     </div>
                 </div>
                 <div class="col-sm-6">
@@ -52,7 +52,7 @@
                         <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">Pubertas
                             Pada Perempuan
                         </a>
-                        <img class="card-img-top" src="<?=BASEURL?>/video/3/pg.jpg" alt="Card image cap">
+                        <img class="card-img-top" src="<?=BASEURL?>/video/Remaja/pg.jpg" alt="Card image cap">
                     </div>
                 </div> -->
             <br>

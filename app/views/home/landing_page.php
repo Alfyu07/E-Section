@@ -74,7 +74,7 @@
                             bertujuan untuk mengenalkan dan mengajarkan anak-anak tentang pubertas
                             dan hubungan sehat</h4>
                         <br>
-                        <img class="d-block w-100" src="<?= BASEURL?>/video/Anak/Bully.jpg" alt="First slide">
+                        <img class="d-block w-100" src="<?= BASEURL?>/video/4/Bully.jpg" alt="First slide">
                         <br>
                     </div>
                     <div class="carousel-item">
@@ -83,7 +83,7 @@
                             Remaja tentang pubertas dan hubungan sehat Reproduksi,
                             hubungan sehat, dan kesehatan mental</h4>
                         <br>
-                        <img class="d-block w-100" src="<?= BASEURL?>/video/Remaja/tubuh.jpg" alt="Second slide">
+                        <img class="d-block w-100" src="<?= BASEURL?>/video/3/tubuh.jpg" alt="Second slide">
                         <br>
                     </div>
                     <div class="carousel-item">
@@ -92,7 +92,7 @@
                             Orang Dewasa tentang reproduksi, hubungan sehat,
                             kesehatan mental, dan kontrasepsi</h4>
                         <br>
-                        <img class="d-block w-100" src="<?= BASEURL?>/video/Dewasa/contra.jpg" alt="Third slide">
+                        <img class="d-block w-100" src="<?= BASEURL?>/video/2/contra.jpg" alt="Third slide">
                         <br>
                     </div>
                 </div>
