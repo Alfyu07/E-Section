@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>profile</title>
+    <title>Edit profile</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -43,6 +43,16 @@
             background-color: #EEEEEE !important;
             border-color: #BE4C4C !important;
         }
+
+        .form-control.mx-sm-3 {
+            background-color: #ffff !important;
+            border-color: #BE4C4C !important;
+        }
+
+        .col {
+            padding: 10px 20px 20px 10px;
+            margin-left: 30px;
+        }
     </style>
 </head>
 
@@ -52,21 +62,23 @@
         </div>
     </div>
     <br>
-    <div style="margin-top: 125px; margin-left: -3%; font-weight: bolder; text-align: center; color: #BE4C4C;">
-        <h5>
+    <div class="container" style="width: 250px; margin: 120px 100px 10px 620px; text-align: center;">
+        <form action="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+        </form>
+        <br>
+        <h5 style="color: #BE4C4C; font-weight: bold;">
             Sarah Kartika
         </h5>
-        <h7>
+        <h7 style="color: #BE4C4C;">
             @Sarah_33
         </h7>
     </div>
-    <div class="container" style="width: 800px; margin-bottom: 5%;">
+
+    <div class=" container" style="width: 800px; margin-bottom: 5%;">
         <ul class="nav nav-tabs" style="background-color: #EEEEEE; width: fit-content;">
             <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab" href="#profile" style="color: #BE4C4C">PROFILE</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#tes" style="color: #BE4C4C">TES</a>
+                <a class="nav-link active" data-toggle="tab" style="color: #BE4C4C">PROFILE</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -84,23 +96,54 @@
                     style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 30px 30px 30px 30px; background-color: white;">
                     <p3>Email</p3>
                 </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputPassword6">Password Lama: </label>
+                        </div>
+                        <div class="col" style="margin-left: -150px;">
+                            <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                                aria-describedby="passwordHelpInline">
+                        </div>
+                        <div class="col">
+                            <small id="passwordHelpInline" class="text-muted">
+                                Masukkan Password Lama
+                            </small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputPassword6">Password Baru: </label>
+                        </div>
+                        <div class="col" style="margin-left: -150px;">
+                            <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                                aria-describedby="passwordHelpInline">
+                        </div>
+                        <div class="col">
+                            <small id="passwordHelpInline" class="text-muted">
+                                Password harus 8-20 karakter
+                            </small>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="inputPassword6">Confirm Password: </label>
+                        </div>
+                        <div class="col" style="margin-left: -150px;">
+                            <input type="password" id="inputPassword6" class="form-control mx-sm-3"
+                                aria-describedby="passwordHelpInline">
+                        </div>
+                        <div class="col">
+                            <small id="passwordHelpInline" class="text-muted">
+                                Masukkan ulang password
+                            </small>
+                        </div>
+                    </div>
+                </div>
                 <button type="button" class="btn btn-danger"
                     style="background-color: #BE4C4C; margin: 0px 0px 10px 30px">
-                    Edit Profile
+                    Simpan
                 </button>
-            </div>
-            <div class="tab-pane fade " id="tes" role="tabpanel" aria-labelledby="tes"
-                style="border:2px solid#BE4C4C; background-color: #EEEEEE;">
-                <h6 style="font-weight: bold; margin: 10px 10px 10px 10px">
-                    <button type="button" class="btn btn-danger"
-                        style="background-color: #fff; color:#BE4C4C; font-weight: bold;">
-                        Tes Depresi
-                    </button>
-                </h6>
-                <div class="container"
-                    style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 0px 10px 10px 10px; background-color: white; color: #BE4C4C;">
-                    <p3>Diambil Pada 03-05-2021</p3>
-                </div>
             </div>
         </div>
     </div>
