@@ -32,6 +32,8 @@ class C_User extends Controller{
         
 	}
 
+    
+
     public function logout(){
         session_destroy();
         header("location: ".BASEURL);

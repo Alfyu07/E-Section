@@ -1,15 +1,3 @@
-<!doctype html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin Test</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-
-</head>
 
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 450px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
@@ -23,7 +11,7 @@
             </p1>
         </div>
         <div class="container" style="margin-top: 5%;margin-right: 15%; height: 300px; width: 400px; float: right;">
-            <img src="/public/img/A4.png" style="width: auto; height: 320px;">
+            <img src="<?= BASEURL?>/img/A4.png" style="width: auto; height: 320px;">
         </div>
     </div>
     <br>
@@ -35,31 +23,36 @@
                     <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL TEST</label>
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Large"
-                            aria-describedby="inputGroup-sizing-sm">
+                            aria-describedby="inputGroup-sizing-sm" value="<?= $data['judul']?>">
                     </div>
                 </div>
                 <div class="col-sm">
                     <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">Deskripsi</label>
                     <div class="input-group input-group-lg">
                         <input type="text" class="form-control" aria-label="Large"
-                            aria-describedby="inputGroup-sizing-sm">
+                            aria-describedby="inputGroup-sizing-sm" value="<?= $data['desc']?>">
                     </div>
                 </div>
             </div>
             <br>
-            <table class="table">
-                <thead align="center" style="background-color: #BE4C4C; color: white;">
-                    <tr>
-                        <th>SOAL</th>
-                    </tr>
-                </thead>
-                <tbody style="background-color: white;">
-                    <tr>
-                        <td>3</td>
-                    </tr>
-                </tbody>
-            </table>
-            <button type="button" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
+            <form action="<?= BASEURL?>/C_Admin/tambah_soal/<?= $data['id_judul']?>" method="post">
+                <table class="table">
+                    <thead align="center" style="background-color: #BE4C4C; color: white;">
+                        <tr>
+                            <th>SOAL</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        <?php foreach($data['soal'] as $row):?>
+                        <tr>
+                            <td><?= $row['pertanyaan']?></td>
+                        </tr>
+                        <?php endforeach;?>
+                    </tbody>
+                </table>
+                <input type="text" name="soal">
+                <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
+            </form>
             <button type="button" class="btn btn-danger" style="background-color: #BE4C4C;">DELETE</button>
             <br>
             <div class="row justify-content-center">
