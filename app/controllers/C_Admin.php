@@ -105,6 +105,52 @@ class C_Admin extends Controller{
 		// }
 	}
 
+	public function list_test($id){
+		$data['id_role']=$id;
+		// $data['jum']= $this->model("M_Admin")->count_conten($id);
+		// $data['isi']=$this->model("M_Admin")->get_conten($id);
+		$this->view('templates/nav');
+		$this->view('admin/menu_test', $data);
+		$this->view('templates/footer');
+	}
+
+	public function add_test($id){
+		$data['id_role']=$id;
+		$this->view('templates/nav');
+		$this->view('admin/tambah_test', $data);
+		$this->view('templates/footer');
+	}
+
+	public function input_test($id){
+		// var_dump($_POST);
+		if($this->model("M_Admin")->input_test($_POST, $id)){
+			$data['id_judul'] = $this->model("M_Admin")->get_id_byJudul($_POST['judul']);
+			$data['id'] = $id;
+			$data['judul'] = $_POST['judul'];
+			$data['desc'] = $_POST['desc'];
+			$data['soal'] = $this->model("M_Admin")->get_soal_byId($data['id_judul']);
+			$this->view('templates/nav');
+			$this->view('admin/tambah_soal', $data);
+			$this->view('templates/footer');
+		}		
+		else{
+			header('location: '.BASEURL.'/C_Admin/add_test/'.$id);
+		}
+	}  
+
+	public function tambah_soal($id_judul){
+		if($this->model("M_Admin")->tambah_soal($_POST, $id_judul)){
+			$hasil = $this->model("M_Admin")->get_judul_byId($id_judul);
+			$result = mysqli_fetch_all($hasil);
+			$data['id_judul'] = $id_judul;
+			$data['judul'] = $result[0][0];
+			$data['desc'] = $result[0][1];
+			$data['soal'] = $this->model("M_Admin")->get_soal_byId($id_judul);
+			$this->view('templates/nav');
+			$this->view('admin/tambah_soal', $data);
+			$this->view('templates/footer');
+		}
+	}
 
 }
 

@@ -67,6 +67,40 @@ class M_Admin{
 		return $hasil;
 	}
 
+	public function input_test($data, $id){
+		$judul = $data['judul'];
+		$desc = $data['desc'];
+		$que = "INSERT INTO judul_soal VALUES (null, $id, '$judul', '$desc')";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function get_id_byJudul($data){
+		$que = "SELECT id_judul FROM judul_soal WHERE judul='$data'";
+		$hasil = $this->koneksi->exec($que);
+		$result = mysqli_fetch_all($hasil);
+		return $result[0][0];
+	}
+
+	public function tambah_soal($data, $id_judul){
+		$soal = $data['soal'];
+		$que = "INSERT INTO soal VALUES ($id_judul, null, '$soal')";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+	
+	public function get_judul_byId($data){
+		$que = "SELECT judul, deskripsi FROM judul_soal WHERE id_judul='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function get_soal_byId($id_judul){
+		$que = "SELECT pertanyaan FROM soal WHERE id_judul='$id_judul'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
 }
+
 
 ?>
