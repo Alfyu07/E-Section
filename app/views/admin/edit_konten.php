@@ -15,7 +15,7 @@
                     <form action="<?= BASEURL?>/C_Admin/update_foto/<?= $row['id_konten']?>/<?= $row['id_role']?>" method="post" enctype="multipart/form-data">
                         <div class="col-sm-4">
                             <div class="card" style="width: 20rem;">
-                                <img class="card-img-top" src="<?=BASEURL?>/img/upload/<?= $row['gambar']?>" alt="Add Foto">
+                                <img class="card-img-top" src="<?=BASEURL?>/img/upload/<?= $row['gambar']?>" alt="Add Foto" style="height: 11rem;">
                                 <div class="card-body">
                                     <input type="file" name="upload">
                                     <button type="submit" name="submit" class="btn btn-danger mt-2" style="background-color: #BE4C4C ;">UPDATE</button>
@@ -40,12 +40,12 @@
                                     <input name="tag" type="text" class="form-control" aria-label="Large"
                                         aria-describedby="inputGroup-sizing-sm" value="<?= $row['tag']?>" required>
                                 </div>
-                                <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">MATERI</label>
-                                <div class="input-group input-group-lg">
-                                    <input name="materi" type="textarea" class="form-control" aria-label="Large"
-                                        aria-describedby="inputGroup-sizing-sm" style="height: 7rem" value="<?= $row['materi']?>" required>
-                                </div>
+                                
                         </div>
+                </div>
+                <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">MATERI</label>
+                <div class="input-group input-group-lg">
+                    <input name="materi" type="textarea" class="form-control" aria-label="Large"aria-describedby="inputGroup-sizing-sm" style="height: 7rem" value="<?= $row['materi']?>" required>
                 </div>
                     <br>
                     <table class="table">
