@@ -39,13 +39,17 @@
                 <table class="table">
                     <thead align="center" style="background-color: #BE4C4C; color: white;">
                         <tr>
-                            <th>SOAL</th>
+                            <th colspan="2">SOAL</th>
                         </tr>
                     </thead>
                     <tbody style="background-color: white;">
                         <?php foreach($data['soal'] as $row):?>
                         <tr>
                             <td><?= $row['pertanyaan']?></td>
+                            <!-- <td style="width: 10%"><input type="button" class="btn btn-danger" style="background-color: #BE4C4C;" value="DELETE"></td> -->
+                            <?php if($row['pertanyaan']!=""):?>
+                                <td style="width: 10%"><a href="<?= BASEURL?>/C_Admin/hapus_soal/<?=$row['pertanyaan']?>" onclick="return confirm('Apakah Anda yakin?');" class="btn btn-danger" role="button" style="background-color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: white; margin: 0px 0px 0px 5px;">DELETE</a></td>
+                            <?php endif;?>
                         </tr>
                         <?php endforeach;?>
                     </tbody>
@@ -53,7 +57,6 @@
                 <input type="text" name="soal">
                 <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
             </form>
-            <button type="button" class="btn btn-danger" style="background-color: #BE4C4C;">DELETE</button>
             <br>
             <div class="row justify-content-center">
                 <button type="button" class="btn btn-danger"
