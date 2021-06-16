@@ -27,7 +27,8 @@
     <br>
     <div class="container" style="margin-left: 10%;">
         <form action="<?=BASEURL?>/C_Admin/add_konten/<?= $data['id_role']?>" method="get">
-            <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
+            <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH ARTIKEL</button>
+            <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH VIDEO</button>
         </form>
     </div>
     <br>
