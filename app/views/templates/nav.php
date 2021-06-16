@@ -79,7 +79,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <img src="<?=BASEURL?>/img/profile.png" width="50px"  >
-                    <a href="#" style="left: 60%;">Profile</a> <br>
+                    <a href="<?= BASEURL?>/C_User/profil" style="left: 60%;">Profile</a> <br>
                     <div class="dropdown-divider"></div>
                     <img src="<?=BASEURL?>/img/logout.png" width="50px" >
                     <a href="<?=BASEURL?>/C_User/logout" style="left: 60%;">Log Out</a> <br>

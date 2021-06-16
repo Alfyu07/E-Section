@@ -30,6 +30,7 @@
             <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH ARTIKEL</button>
             <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH VIDEO</button>
         </form>
+        
     </div>
     <br>
     <div class="d-flex p-2"
