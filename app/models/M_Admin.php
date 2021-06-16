@@ -100,6 +100,18 @@ class M_Admin{
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
+
+	public function get_id_bySoal($data){
+		$que = "SELECT id_soal, id_judul FROM soal WHERE pertanyaan='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function delete_soal($data){
+		$que = "DELETE from soal WHERE id_soal='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
 }
 
 

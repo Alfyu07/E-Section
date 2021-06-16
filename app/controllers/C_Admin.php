@@ -100,9 +100,6 @@ class C_Admin extends Controller{
 		if($this->model("M_Admin")->delete($id)){
 			header('location: '.BASEURL.'/C_Admin/list_konten/'.$role);
 		}
-		// else{
-		// 	header('location: '.BASEURL.'/C_Admin/list_konten/'.$id);
-		// }
 	}
 
 	public function list_test($id){
@@ -138,6 +135,23 @@ class C_Admin extends Controller{
 		}
 	}  
 
+	public function hapus_soal($soal){
+		$hasil = $this->model("M_Admin")->get_id_bySoal($soal);
+		$result = mysqli_fetch_all($hasil);
+		$data['id_judul'] = $result[0][1];
+		$data['id_soal'] = $result[0][0];
+		$ket = $this->model("M_Admin")->get_judul_byId($data['id_judul']);
+		$keterangan = mysqli_fetch_all($ket);
+		$data['judul'] = $keterangan[0][0];
+		$data['desc'] = $keterangan[0][1];
+		$data['soal'] = $this->model("M_Admin")->get_soal_byId($data['id_judul']);
+		if($this->model("M_Admin")->delete_soal($data['id_soal'])){
+			$this->view('templates/nav');
+			$this->view('admin/tambah_soal', $data);
+			$this->view('templates/footer');
+		}
+	}
+
 	public function tambah_soal($id_judul){
 		if($this->model("M_Admin")->tambah_soal($_POST, $id_judul)){
 			$hasil = $this->model("M_Admin")->get_judul_byId($id_judul);
@@ -152,6 +166,7 @@ class C_Admin extends Controller{
 		}
 	}
 
+	
 }
 
 ?>
