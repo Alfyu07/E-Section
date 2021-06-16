@@ -17,52 +17,53 @@
     <br>
     <div class="d-flex p-2"
         style="background-color: #EEEEEE; align-items: left; margin-left: 10%; margin-right:  10%; margin-bottom: 5%;">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL TEST</label>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Large"
-                            aria-describedby="inputGroup-sizing-sm" value="<?= $data['judul']?>">
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">Deskripsi</label>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" aria-label="Large"
-                            aria-describedby="inputGroup-sizing-sm" value="<?= $data['desc']?>">
-                    </div>
-                </div>
-            </div>
-            <br>
+            <div class="container">
             <form action="<?= BASEURL?>/C_Admin/tambah_soal/<?= $data['id_judul']?>" method="post">
-                <table class="table">
-                    <thead align="center" style="background-color: #BE4C4C; color: white;">
-                        <tr>
-                            <th colspan="2">SOAL</th>
-                        </tr>
-                    </thead>
-                    <tbody style="background-color: white;">
-                        <?php foreach($data['soal'] as $row):?>
-                        <tr>
-                            <td><?= $row['pertanyaan']?></td>
-                            <!-- <td style="width: 10%"><input type="button" class="btn btn-danger" style="background-color: #BE4C4C;" value="DELETE"></td> -->
-                            <?php if($row['pertanyaan']!=""):?>
-                                <td style="width: 10%"><a href="<?= BASEURL?>/C_Admin/hapus_soal/<?=$row['pertanyaan']?>" onclick="return confirm('Apakah Anda yakin?');" class="btn btn-danger" role="button" style="background-color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: white; margin: 0px 0px 0px 5px;">DELETE</a></td>
-                            <?php endif;?>
-                        </tr>
-                        <?php endforeach;?>
-                    </tbody>
-                </table>
-                <input type="text" name="soal">
-                <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
-            </form>
-            <br>
-            <div class="row justify-content-center">
-                <button type="button" class="btn btn-danger"
-                    style="background-color: #BE4C4C; width: 30rem;">SIMPAN</button>
+                <div class="row">
+                    <div class="col-sm">
+                        <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL TEST</label>
+                        <div class="input-group input-group-lg">
+                            <input name="judul" type="text" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" value="<?= $data['judul']?>">
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">Deskripsi</label>
+                        <div class="input-group input-group-lg">
+                            <input name="desc" type="text" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" value="<?= $data['desc']?>">
+                        </div>
+                    </div>
+                </div>
+                <br>
+                    <table class="table">
+                        <thead align="center" style="background-color: #BE4C4C; color: white;">
+                            <tr>
+                                <th colspan="2">SOAL</th>
+                            </tr>
+                        </thead>
+                        <tbody style="background-color: white;">
+                            <?php foreach($data['soal'] as $row):?>
+                            <tr>
+                                <td><?= $row['pertanyaan']?></td>
+                                <!-- <td style="width: 10%"><input type="button" class="btn btn-danger" style="background-color: #BE4C4C;" value="DELETE"></td> -->
+                                <?php if($row['pertanyaan']!=""):?>
+                                    <td style="width: 10%"><a href="<?= BASEURL?>/C_Admin/hapus_soal/<?=$row['pertanyaan']?>" onclick="return confirm('Apakah Anda yakin?');" class="btn btn-danger" role="button" style="background-color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: white; margin: 0px 0px 0px 5px;">DELETE</a></td>
+                                <?php endif;?>
+                            </tr>
+                            <?php endforeach;?>
+                        </tbody>
+                    </table>
+                    <input type="text" name="soal">
+                    <button type="submit" name="add" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
+                    <br>
+                    <div class="row justify-content-center">
+                        <button type="submit" name="update" class="btn btn-danger"
+                            style="background-color: #BE4C4C; width: 30rem;">SIMPAN</button>
+                    </div>
+                    </form>
             </div>
-        </div>
+        
     </div>
 </body>
 

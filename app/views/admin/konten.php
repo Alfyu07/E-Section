@@ -60,7 +60,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -90,7 +90,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -120,7 +120,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$i].'</a>';
+                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>

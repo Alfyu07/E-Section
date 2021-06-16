@@ -112,6 +112,28 @@ class M_Admin{
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
+
+	public function get_judul_byRole($data){
+		$que = "SELECT judul, deskripsi FROM judul_soal WHERE id_role='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function count_test($id){
+		$que = "SELECT * FROM judul_soal WHERE id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		$num = mysqli_num_rows($hasil);
+		return $num;
+	}
+
+	public function update_test($data, $id){
+		$judul = $data['judul'];
+		$desc = $data['desc'];
+		$que = "UPDATE judul_soal SET judul='$judul', deskripsi='$desc' WHERE id_judul='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
 }
 
 

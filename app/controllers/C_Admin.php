@@ -83,7 +83,7 @@ class C_Admin extends Controller{
 			}
 		}
 	}
-
+	
 	public function edit($id, $role){
 		$data['id'] = $id;
 		$data['isi'] = $_POST;
@@ -104,8 +104,9 @@ class C_Admin extends Controller{
 
 	public function list_test($id){
 		$data['id_role']=$id;
-		// $data['jum']= $this->model("M_Admin")->count_conten($id);
-		// $data['isi']=$this->model("M_Admin")->get_conten($id);
+		$data['jum']= $this->model("M_Admin")->count_test($id);
+		$ket = $this->model("M_Admin")->get_judul_byRole($data['id_role']);
+		$data['isi'] = $ket;
 		$this->view('templates/nav');
 		$this->view('admin/menu_test', $data);
 		$this->view('templates/footer');
@@ -144,8 +145,8 @@ class C_Admin extends Controller{
 		$keterangan = mysqli_fetch_all($ket);
 		$data['judul'] = $keterangan[0][0];
 		$data['desc'] = $keterangan[0][1];
-		$data['soal'] = $this->model("M_Admin")->get_soal_byId($data['id_judul']);
 		if($this->model("M_Admin")->delete_soal($data['id_soal'])){
+			$data['soal'] = $this->model("M_Admin")->get_soal_byId($data['id_judul']);
 			$this->view('templates/nav');
 			$this->view('admin/tambah_soal', $data);
 			$this->view('templates/footer');
@@ -153,17 +154,33 @@ class C_Admin extends Controller{
 	}
 
 	public function tambah_soal($id_judul){
-		if($this->model("M_Admin")->tambah_soal($_POST, $id_judul)){
-			$hasil = $this->model("M_Admin")->get_judul_byId($id_judul);
-			$result = mysqli_fetch_all($hasil);
-			$data['id_judul'] = $id_judul;
-			$data['judul'] = $result[0][0];
-			$data['desc'] = $result[0][1];
-			$data['soal'] = $this->model("M_Admin")->get_soal_byId($id_judul);
-			$this->view('templates/nav');
-			$this->view('admin/tambah_soal', $data);
-			$this->view('templates/footer');
+		if(isset($_POST["add"])){
+			if($this->model("M_Admin")->tambah_soal($_POST, $id_judul)){
+				$hasil = $this->model("M_Admin")->get_judul_byId($id_judul);
+				$result = mysqli_fetch_all($hasil);
+				$data['id_judul'] = $id_judul;
+				$data['judul'] = $result[0][0];
+				$data['desc'] = $result[0][1];
+				$data['soal'] = $this->model("M_Admin")->get_soal_byId($id_judul);
+				$this->view('templates/nav');
+				$this->view('admin/tambah_soal', $data);
+				$this->view('templates/footer');
+			}
 		}
+		if(isset($_POST["update"])){
+			if($this->model("M_Admin")->update_test($_POST, $id_judul)){
+				$hasil = $this->model("M_Admin")->get_judul_byId($id_judul);
+				$result = mysqli_fetch_all($hasil);
+				$data['id_judul'] = $id_judul;
+				$data['judul'] = $result[0][0];
+				$data['desc'] = $result[0][1];
+				$data['soal'] = $this->model("M_Admin")->get_soal_byId($id_judul);
+				$this->view('templates/nav');
+				$this->view('admin/tambah_soal', $data);
+				$this->view('templates/footer');
+			}
+		}
+
 	}
 
 	
