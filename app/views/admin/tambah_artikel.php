@@ -1,7 +1,7 @@
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 450px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
         <div class="container centered" style="margin-top: 13%;">
-            <h1 style="text-align: center; font-size: 30px;">TAMBAH DATA VIDEO</h1>
+            <h1 style="text-align: center; font-size: 30px;">TAMBAH DATA ARTIKEL</h1>
         </div>
     </div>
     <br>
@@ -10,7 +10,7 @@
         
         <div class="container">
             <!-- FORM START -->
-            <form action="<?= BASEURL?>/C_Admin/save_konten/<?= $data[0]?>" method="post" enctype="multipart/form-data">
+            <form action="<?= BASEURL?>/C_Admin/save_artikel/<?= $data[0]?>" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-sm-4">
                         <div class="card" style="width: 20rem;">
@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <div class="col-sm-8">
-                        <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL VIDEO</label>
+                        <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL ARTIKEL</label>
                         <div class="input-group input-group-lg">
                             <input name="judul" type="text" class="form-control" aria-label="Large"
                                 aria-describedby="inputGroup-sizing-sm" required>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </div>
-                <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">TENTANG CHANNEL YOUTUBE</label>
+                <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">MATERI</label>
                 <div class="input-group input-group-lg">
                     <input name="materi" type="textarea" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" style="height: 7rem" required>
                 </div>

@@ -101,7 +101,7 @@
                     <li class="nav-item dropdown" style="padding-right: 275px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Artikel
+                            VIDEO
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
@@ -119,18 +119,18 @@
                     <li class="nav-item dropdown" style="padding-right: 275px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Video
+                            ARTIKEL
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="<?=BASEURL?>/C_Admin/list_konten/4" style="left: 60%;">Anak</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_artikel/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
-                            <a href="<?=BASEURL?>/C_Admin/list_konten/3" style="left: 60%;">Remaja</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_artikel/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="<?=BASEURL?>/C_Admin/list_konten/2" style="left: 60%;">Dewasa</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_artikel/2" style="left: 60%;">Dewasa</a> <br>
                         </div>
                     </li>
 
@@ -157,13 +157,13 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="#" style="left: 60%;">Anak</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_sc/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="#" style="left: 60%;">Remaja</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_sc/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="#" style="left: 60%;">Dewasa</a> <br>
+                            <a href="<?=BASEURL?>/C_Admin/list_sc/2" style="left: 60%;">Dewasa</a> <br>
                         </div>
                     </li>
                 </ul>

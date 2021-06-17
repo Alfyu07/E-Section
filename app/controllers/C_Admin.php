@@ -38,7 +38,7 @@ class C_Admin extends Controller{
 				if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
 					// echo "The file ". htmlspecialchars( basename( $_FILES["upload"]["name"])). " has been uploaded.";
 					$_POST['id_role']=$role;
-					if($this->model("M_Admin")->create($_POST)){
+					if($this->model("M_Admin")->create_konten($_POST)){
 						header('location: '.BASEURL.'/C_Admin/list_konten/'.$role);
 					}
 					else {
@@ -183,6 +183,107 @@ class C_Admin extends Controller{
 
 	}
 
+	public function list_artikel($id){
+		// var_dump($id);
+		$data['id_role']=$id;
+		$data['jum']= $this->model("M_Admin")->count_artikel($id);
+		$data['isi']=$this->model("M_Admin")->get_artikel($id);
+		$this->view('templates/nav');
+		$this->view('admin/artikel', $data);
+		$this->view('templates/footer');
+	}
+
+	public function add_artikel($id){
+		$this->view('templates/nav');
+		$this->view('admin/tambah_artikel', $id);
+		$this->view('templates/footer');
+	}
+
+	public function save_artikel($role){
+		$target_dir = "C:/xampp/htdocs/E-Section/public/img/upload/";
+		$target_file = $target_dir . basename($_FILES["upload"]["name"]);
+		$_POST['gambar']=$_FILES["upload"]["name"];
+		// var_dump($_POST);
+		if(isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["upload"]["tmp_name"]);
+		// var_dump($check);
+			if($check !== false) {
+				echo "File is an image - " . $check["mime"] . ".";
+				if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
+					// echo "The file ". htmlspecialchars( basename( $_FILES["upload"]["name"])). " has been uploaded.";
+					$_POST['id_role']=$role;
+					if($this->model("M_Admin")->create_artikel($_POST)){
+						header('location: '.BASEURL.'/C_Admin/list_artikel/'.$role);
+					}
+					else {
+						header('location: '.BASEURL.'/C_Admin/add_artikel/'.$role);
+					}
+				} else {
+					// echo "Sorry, there was an error uploading your file.";
+					header('location: '.BASEURL.'/C_Admin/add_artikel/'.$role);
+				}
+			}
+		}
+	}
+
+	public function update_artikel($id, $role){
+		$data['id_artikel']=$id;
+		$data['id_role'] = $role;
+		$data['isi']=$this->model("M_Admin")->get_artikel_byId($id);
+		$this->view('templates/nav');
+		$this->view('admin/edit_artikel', $data);
+		$this->view('templates/footer');
+	}
+
+	public function update_fotoA($id){
+		$target_dir = "C:/xampp/htdocs/E-Section/public/img/upload/";
+		// var_dump($_FILES);
+		$target_file = $target_dir . basename($_FILES["upload"]["name"]);
+		$data['gambar']=$_FILES["upload"]["name"];
+		if(isset($_POST["submit"])) {
+		$check = getimagesize($_FILES["upload"]["tmp_name"]);
+			if($check !== false) {
+				if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
+					$data['id_konten']=$id;
+					if($this->model("M_Admin")->up_foto($data)){
+						header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+					}
+					else {
+						header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+					}
+				} else {
+					header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+				}
+			}
+		}
+	}
+	
+	public function editArtikel($id, $role){
+		$data['id'] = $id;
+		$data['isi'] = $_POST;
+		$_POST['id_artikel']=$id;
+		if($this->model("M_Admin")->updateArtikel($_POST)){
+			header('location: '.BASEURL.'/C_Admin/list_artikel/'.$role);
+		}
+		else{
+			header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id);
+		}
+	}
+
+	public function delete_artikel($id, $role){
+		if($this->model("M_Admin")->delete($id)){
+			header('location: '.BASEURL.'/C_Admin/list_konten/'.$role);
+		}
+	}
+
+	public function list_sc($id){
+		$data['id_role']=$id;
+		$data['jum']= $this->model("M_Admin")->count_sc($id);
+		$data['isi']=$this->model("M_Admin")->get_sc($id);
+		$this->view('templates/nav');
+		$this->view('admin/source', $data);
+		$this->view('templates/footer');
+	}
 	
 }
 

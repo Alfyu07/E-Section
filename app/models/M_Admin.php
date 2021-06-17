@@ -21,7 +21,7 @@ class M_Admin{
 		return $num;
 	}
 
-	public function create($data){
+	public function create_konten($data){
 		$id_role = $data['id_role'];
 		$judul = $data['judul'];
 		$source = $data['source'];
@@ -132,6 +132,64 @@ class M_Admin{
 		$que = "UPDATE judul_soal SET judul='$judul', deskripsi='$desc' WHERE id_judul='$id'";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
+	}
+
+	public function get_artikel($id){
+		$que = "SELECT * FROM artikel WHERE id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function count_artikel($id){
+		$que = "SELECT * FROM artikel WHERE id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		$num = mysqli_num_rows($hasil);
+		return $num;
+	}
+
+	public function create_artikel($data){
+		$id_role = $data['id_role'];
+		$judul = $data['judul'];
+		$source = $data['source'];
+		$materi = $data['materi'];
+		$gambar = $data['gambar'];
+		$fakta = $data['fakta'];
+		$tag = $data['tag'];
+		$que = "INSERT INTO artikel VALUES (null, $id_role, '$judul', '$source',
+		'$materi', '$gambar', '$fakta', '$tag')";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function get_artikel_byId($data){
+		$que = "SELECT * FROM artikel WHERE id_artikel='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function updateArtikel($data){
+		$id_konten = $data['id_artikel'];
+		$judul = $data['judul'];
+		$source = $data['source'];
+		$materi = $data['materi'];
+		$fakta = $data['fakta'];
+		$tag = $data['tag'];
+		$que = "UPDATE artikel SET judul='$judul', source='$source', materi='$materi', fakta='$fakta', tag='$tag' WHERE id_konten='$id_konten'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function get_sc($data){
+		$que = "SELECT source FROM artikel INNER JOIN konten WHERE id_artikel='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $que;
+	}
+
+	public function count_sc($id){
+		$que = "SELECT * FROM artikel WHERE id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		$num = mysqli_num_rows($hasil);
+		return $num;
 	}
 
 }

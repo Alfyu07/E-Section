@@ -35,7 +35,6 @@ class C_User extends Controller{
     public function profil(){
         
     }
-    
 
     public function logout(){
         session_destroy();
