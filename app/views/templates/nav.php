@@ -98,10 +98,10 @@
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item dropdown" style="padding-right: 400px;">
+                    <li class="nav-item dropdown" style="padding-right: 275px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            MATERI
+                            Artikel
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
@@ -116,16 +116,31 @@
                         </div>
                     </li>
 
-                    <li class="nav-item dropdown" style="padding-right: 400px;">
+                    <li class="nav-item dropdown" style="padding-right: 275px;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Video
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                            style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
+                            <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/4" style="left: 60%;">Anak</a> <br>
+                            <div class="dropdown-divider"></div>
+                            <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/3" style="left: 60%;">Remaja</a> <br>
+                            <div class="dropdown-divider"></div>
+                            <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
+                            <a href="<?=BASEURL?>/C_Admin/list_konten/2" style="left: 60%;">Dewasa</a> <br>
+                        </div>
+                    </li>
+
+                    <li class="nav-item dropdown" style="padding-right: 275px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             TES
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
-                            <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
-                            <a href="<?=BASEURL?>/C_Admin/list_test/4" style="left: 60%;">Anak</a> <br>
-                            <div class="dropdown-divider"></div>
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_Admin/list_test/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
