@@ -22,14 +22,24 @@
         <div class="container" style="margin-left: 5%;">
             <div class="container">
                 <div style="padding-top: 5rem; text-align: justify; ">
-                    <h5 style="font-weight: bolder;">Source Konten Anak-Anak</h5>
+                    <h5 style="font-weight: bolder;">Source Konten <?php 
+                if($data['id_role']==2){
+                    echo "Dewasa";
+                }
+                else if($data['id_role']==3){
+                    echo "Remaja";
+                }
+                else if($data['id_role']==4){
+                    echo "Anak-anak";
+                }
+                ?></h5>
                     <div class="dropdown-divider" style="border-color: #BE4C4C;"></div>
                     <h7>
                         <ul>
                             <li><a
                                     href="https://www.youtube.com/watch?v=LnQ1MdP-Qxc">https://www.youtube.com/watch?v=LnQ1MdP-Qxc</a>
                             </li>
-                            <li><a
+                            <!-- <li><a
                                     href="https://www.youtube.com/watch?v=p1HFymHtGho">https://www.youtube.com/watch?v=p1HFymHtGho</a>
                             </li>
                             <li><a
@@ -43,11 +53,11 @@
                             </li>
                             <li><a
                                     href="https://www.youtube.com/watch?v=hpCyiyNqzlE">https://www.youtube.com/watch?v=hpCyiyNqzlE</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </h7>
                     <br>
-                    <h5 style="font-weight: bolder;">Source Konten Remaja</h5>
+                    <!-- <h5 style="font-weight: bolder;">Source Konten Remaja</h5>
                     <div class="dropdown-divider" style="border-color: #BE4C4C;"></div>
                     <h7>
                         <ul>
@@ -98,7 +108,7 @@
                                     href="https://www.youtube.com/watch?v=fhl6SFBHgcs">https://www.youtube.com/watch?v=fhl6SFBHgcs</a>
                             </li>
                         </ul>
-                    </h7>
+                    </h7> -->
                 </div>
             </div>
         </div>
