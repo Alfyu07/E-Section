@@ -36,12 +36,67 @@
                     </div>
                 </div>
                 <br>
+                <table class="table">
+                    <thead align="center" style="background-color: #BE4C4C; color: white;">
+                        <tr>
+                            <th>HASIL 1</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        <tr>
+                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead align="center" style="background-color: #BE4C4C; color: white;">
+                        <tr>
+                            <th>HASIL 2</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        <tr>
+                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead align="center" style="background-color: #BE4C4C; color: white;">
+                        <tr>
+                            <th>HASIL 3</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        <tr>
+                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table">
+                    <thead align="center" style="background-color: #BE4C4C; color: white;">
+                        <tr>
+                            <th>HASIL 4</th>
+                        </tr>
+                    </thead>
+                    <tbody style="background-color: white;">
+                        <tr>
+                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                                aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
+                        </tr>
+                    </tbody>
+                </table>
+
                 <div class="row justify-content-center">
                     <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C; width: 30rem;">SIMPAN</button>
                 </div>
             </form> 
         </div>
     </div>
+
+    
 </body>
 
 </html>
