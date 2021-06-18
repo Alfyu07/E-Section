@@ -199,6 +199,12 @@ class M_Admin{
 		return $num;
 	}
 
+	public function get_video($data){
+		$que = "SELECT * FROM konten WHERE id_konten='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
 }
 
 

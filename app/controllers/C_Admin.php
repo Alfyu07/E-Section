@@ -287,10 +287,18 @@ class C_Admin extends Controller{
 		$this->view('templates/footer');
 	}
 
-	public function VideoPage($sc){
+	public function VideoPage($id){
+		$hasil = $this->model("M_Admin")->get_video($id);
+		$result = mysqli_fetch_all($hasil);
+		$data['judul'] = $result[0][2];
+		$data['sc'] = $result[0][3];
+		$data['tentang'] = $result[0][4];
+		$data['gambar'] = $result[0][5];
+		$data['fakta'] = $result[0][6];
 		$this->view('templates/nav');
-		$this->view('admin/video', $sc);
+		$this->view('admin/video', $data);
 		$this->view('templates/footer');
+		// echo $hasil;
 	}
 	
 }

@@ -42,7 +42,7 @@
                     if($i%3 == 1){
                         echo "<div class='row'>";
                         echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
-                    <a href="'.BASEURL.'/C_Admin/VideoPage/'.$row['source'].'" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                    <a href="'.BASEURL.'/C_Admin/VideoPage/'.$row['id_konten'].'" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
