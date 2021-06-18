@@ -44,7 +44,7 @@
                     </thead>
                     <tbody style="background-color: white;">
                         <tr>
-                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                            <td><input name="label1" type="textarea" class="form-control" aria-label="Large"
                                 aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
                         </tr>
                     </tbody>
@@ -57,7 +57,7 @@
                     </thead>
                     <tbody style="background-color: white;">
                         <tr>
-                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                            <td><input name="label2" type="textarea" class="form-control" aria-label="Large"
                                 aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
                         </tr>
                     </tbody>
@@ -70,7 +70,7 @@
                     </thead>
                     <tbody style="background-color: white;">
                         <tr>
-                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                            <td><input name="label3" type="textarea" class="form-control" aria-label="Large"
                                 aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
                         </tr>
                     </tbody>
@@ -83,7 +83,7 @@
                     </thead>
                     <tbody style="background-color: white;">
                         <tr>
-                            <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
+                            <td><input name="label4" type="textarea" class="form-control" aria-label="Large"
                                 aria-describedby="inputGroup-sizing-sm" style="height: 3Rem" required></td>
                         </tr>
                     </tbody>

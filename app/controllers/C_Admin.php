@@ -278,10 +278,18 @@ class C_Admin extends Controller{
 
 	public function list_sc($id){
 		$data['id_role']=$id;
-		$data['jum']= $this->model("M_Admin")->count_sc($id);
-		$data['isi']=$this->model("M_Admin")->get_sc($id);
+		// $data['jum']= $this->model("M_Admin")->count_sc($id);
+		$data['isi1']=$this->model("M_Admin")->get_scArtikel($id);
+		$data['isi2']=$this->model("M_Admin")->get_scVideo($id);
+		// var_dump($data);
 		$this->view('templates/nav');
 		$this->view('admin/source', $data);
+		$this->view('templates/footer');
+	}
+
+	public function VideoPage($sc){
+		$this->view('templates/nav');
+		$this->view('admin/video', $sc);
 		$this->view('templates/footer');
 	}
 	

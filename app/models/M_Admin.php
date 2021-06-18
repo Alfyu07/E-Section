@@ -70,7 +70,8 @@ class M_Admin{
 	public function input_test($data, $id){
 		$judul = $data['judul'];
 		$desc = $data['desc'];
-		$que = "INSERT INTO judul_soal VALUES (null, $id, '$judul', '$desc')";
+		$label = $data['label1']."/".$data['label2']."/".$data['label3']."/".$data['label4'];
+		$que = "INSERT INTO judul_soal VALUES (null, $id, '$judul', '$desc', '$label')";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
@@ -179,10 +180,16 @@ class M_Admin{
 		return $hasil;
 	}
 
-	public function get_sc($data){
-		$que = "SELECT source FROM artikel INNER JOIN konten WHERE id_artikel='$data'";
+	public function get_scArtikel($data){
+		$que = "SELECT source FROM artikel WHERE id_role='$data'";
 		$hasil = $this->koneksi->exec($que);
-		return $que;
+		return $hasil;
+	}
+
+	public function get_scVideo($data){
+		$que = "SELECT source FROM konten WHERE id_role='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
 	}
 
 	public function count_sc($id){
