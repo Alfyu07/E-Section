@@ -42,7 +42,7 @@
                     if($i%3 == 1){
                         echo "<div class='row'>";
                         echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
-                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                    <a href="'.BASEURL.'/C_Admin/ArtikelPage/'.$row['id_artikel'].'" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">

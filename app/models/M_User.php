@@ -21,6 +21,27 @@ class M_User{
 		return $num;
 	}
 
+	public function get_profil($id){
+		$que = "SELECT * FROM user WHERE uname='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function edit_profile($id, $data){
+		$email = $data['email'];
+		$pass = $data['passbar'];
+		$que = "UPDATE user SET email='$email', password='$pass' WHERE uname='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function save_profile($id, $data){
+		$que = "UPDATE user SET avatar='$data' WHERE uname='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+
 	// public function create($data){
 	// 	$id_role = $data['id_role'];
 	// 	$judul = $data['judul'];

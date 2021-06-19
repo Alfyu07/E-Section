@@ -300,6 +300,21 @@ class C_Admin extends Controller{
 		$this->view('templates/footer');
 		// echo $hasil;
 	}
+
+	public function ArtikelPage($id){
+		$hasil = $this->model("M_Admin")->artikel($id);
+		$result = mysqli_fetch_all($hasil);
+		$data['judul'] = $result[0][2];
+		$data['sc'] = $result[0][3];
+		$data['materi'] = $result[0][4];
+		$data['gambar'] = $result[0][5];
+		$data['fakta'] = $result[0][6];
+		// var_dump($data);
+		$this->view('templates/nav');
+		$this->view('admin/artikel_lanjut', $data);
+		$this->view('templates/footer');
+	}
+	
 	
 }
 

@@ -205,6 +205,14 @@ class M_Admin{
 		return $hasil;
 	}
 
+	public function artikel($data){
+		$que = "SELECT * FROM artikel WHERE id_artikel='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+
+
 }
 
 

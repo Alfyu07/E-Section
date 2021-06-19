@@ -59,6 +59,41 @@
             font-weight: bold;
         }
     </style>
+    <style>
+        .circle {
+            background-color: aliceblue;
+            width: 250px;
+            height: 250px;
+            align-items: center;
+            border-radius: 50%;
+            border: 3px solid #BE4C4C;
+            margin-top: 125px;
+            margin-left: 40%;
+        }
+
+        .nav-item:active,
+        .nav-item:hover {
+            background-color: #FEA5A5;
+        }
+
+        .active {
+            background-color: #EEEEEE !important;
+            border-top-color: #BE4C4C !important;
+            border-left-color: #BE4C4C !important;
+            border-right-color: #BE4C4C !important;
+        }
+
+        .form-control.mx-sm-3 {
+            background-color: #ffff !important;
+            border-color: #BE4C4C !important;
+        }
+
+        .col {
+            padding: 10px 20px 20px 10px;
+            margin-left: 30px;
+        }
+    </style>
+    
 </head>
 
 <body style="font-family: 'Raleway', sans-serif;">
