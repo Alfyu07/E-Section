@@ -4,44 +4,63 @@ class C_User extends Controller{
     
     public function index(){
 		// var_dump($_SESSION);
-		$this->view('templates/nav');
+		$this->view('templates/navv');
 		$this->view('menu_user/menu_utama');
 		$this->view('templates/footer');
 	}
 
-    public function list_konten(){
-        // var_dump($_SESSION);
-		$_SESSION['jum']= $this->model("M_User")->count_conten($_SESSION['id_role']);
-		$_SESSION['isi']=$this->model("M_User")->get_conten($_SESSION['id_role']);
-        
-        if($_SESSION['id_role']==2){
-            $this->view('templates/nav');
-            $this->view('menu_user/konten', $_SESSION['id_role']);
-            $this->view('templates/footer');
-        }
-        else if($_SESSION['id_role']==3){
-            $this->view('templates/nav');
-            $this->view('menu_user/konten', $_SESSION['id_role']);
-            $this->view('templates/footer');
-        }
-        else if($_SESSION['id_role']==4){
-            $this->view('templates/nav');
-            $this->view('menu_user/konten', $_SESSION['id_role']);
-            $this->view('templates/footer');
-        }
-        
+    public function list_konten($id){
+		// var_dump($id);
+		$data['id_role']=$id;
+		$data['jum']= $this->model("M_Admin")->count_conten($id);
+		$data['isi']=$this->model("M_Admin")->get_conten($id);
+		$this->view('templates/nav');
+		$this->view('admin/konten', $data);
+		$this->view('templates/footer');
+	}
+
+    public function list_test($id){
+		$data['id_role']=$id;
+		$data['jum']= $this->model("M_Admin")->count_test($id);
+		$ket = $this->model("M_User")->get_judul_byRole($data['id_role']);
+		$data['isi'] = $ket;
+        // var_dump($ket);
+		$this->view('templates/nav');
+		$this->view('admin/menu_test', $data);
+		$this->view('templates/footer');
+	}
+
+    public function list_artikel($id){
+		// var_dump($id);
+		$data['id_role']=$id;
+		$data['jum']= $this->model("M_Admin")->count_artikel($id);
+		$data['isi']=$this->model("M_Admin")->get_artikel($id);
+		$this->view('templates/nav');
+		$this->view('admin/artikel', $data);
+		$this->view('templates/footer');
+	}
+
+    public function list_sc($id){
+		$data['id_role']=$id;
+		// $data['jum']= $this->model("M_Admin")->count_sc($id);
+		$data['isi1']=$this->model("M_Admin")->get_scArtikel($id);
+		$data['isi2']=$this->model("M_Admin")->get_scVideo($id);
+		// var_dump($data);
+		$this->view('templates/nav');
+		$this->view('admin/source', $data);
+		$this->view('templates/footer');
 	}
 
     public function profil(){
 		$hasil = $this->model("M_User")->get_profil($_SESSION['uname']);
         // var_dump(mysqli_fetch_assoc($hasil));
-        $this->view('templates/nav');
+        $this->view('templates/navv');
         $this->view('home/profile', $hasil);
         $this->view('templates/footer');
 	}
 
     public function edit_profile($email, $uname, $gambar){
-		$this->view('templates/nav');
+		$this->view('templates/navv');
         $data['email']=$email;
         $data['uname']=$uname;
         $data['gambar']=$gambar;
@@ -91,6 +110,32 @@ class C_User extends Controller{
 			}
 		}
 	}
+
+    public function mengtes($test,$id){
+        
+        $data['judul'] = $test;
+        $data['id_judul'] = $id;
+        $this->view('templates/navv');
+        $this->view('tes/test1',$data);
+        $this->view('templates/footer');
+    }
+
+    public function tes($test,$judul){
+        $id = $this->model("M_User")->get_soal($test);
+        // $soal = $this->model("M_Admin")->get_soal_byId($id);
+        // var_dump($id);
+        $data['isi'] = $id;
+        $data['judul'] =$judul;
+        $this->view('templates/navv');
+        $this->view('tes/test2',$data);
+        $this->view('templates/footer');
+    }
+
+    public function hasilTes($test){
+        $this->view('templates/navv');
+        $this->view('tes/test3',$test);
+        $this->view('templates/footer');
+    }
 
     public function logout(){
         session_destroy();

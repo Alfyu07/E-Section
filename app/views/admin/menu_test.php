@@ -14,11 +14,13 @@
         </div>
     </div>
     <br>
-    <div class="container" style="margin-left: 10%;">
-        <form action="<?=BASEURL?>/C_Admin/add_test/<?= $data['id_role']?>" method="get">
-            <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
-        </form>
-    </div>
+    <?php if($_SESSION['id_role']==1):?>
+        <div class="container" style="margin-left: 10%;">
+            <form action="<?=BASEURL?>/C_Admin/add_test/<?= $data['id_role']?>" method="get">
+                <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
+            </form>
+        </div>
+    <?php endif;?>
     <div class="d-flex p-2"
         style="background-color: #EEEEEE; align-items: left; margin-left: 10%; margin-right:  10%; margin-bottom: 5%;">
         <div class="container">
@@ -28,7 +30,7 @@
                     <?php if($i%3 == 1):?>
                         <div class="row">
                             <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                                <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                                <a href="<?= BASEURL?>/C_User/mengtes/<?= $row['judul']?>/<?= $row['id_judul']?>" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                                     <?= $row['judul']?>
                                 </a>
                                 <p2 class="isi">
@@ -49,7 +51,7 @@
                         <?php endif;?>
                     <?php elseif($i%3==2):?>
                             <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                                <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                                <a href="<?= BASEURL?>/C_User/mengtes/<?= $row['id_judul']?>" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                                     <?= $row['judul']?>
                                 </a>
                                 <p2 class="isi">
@@ -70,7 +72,7 @@
                         <?php endif;?>
                     <?php elseif($i%3==0 || $i==$num):?>
                             <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                                <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">\
+                                <a href="<?= BASEURL?>/C_User/mengtes/<?= $row['id_judul']?>" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">\
                                     <?= $row['judul']?>
                                 </a>
                                 <p2 class="isi">

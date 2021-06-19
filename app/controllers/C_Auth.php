@@ -15,17 +15,25 @@ class C_Auth extends Controller {
 	} 
 
 	public function validasi(){
+		// echo $this->model("M_Auth")->valid($_POST);
 		if ($this->model("M_Auth")->valid($_POST)>0){
 			if($this->model("M_Auth")->get_role($_POST['uname'])==1){
 				// echo $this->model("M_Auth")->get_role($_POST['uname']);
 				header("location: ".BASEURL."/C_Admin/index");
 			}
 			else{
+				$data = $this->model("M_User")->get_profil($_POST['uname']);
+				$fetch = mysqli_fetch_all($data);
+				// var_dump($fetch);
+				$_SESSION['id_role']=$fetch[0][5];
 				header("location: ".BASEURL."/C_User/index");
 			}
 		}
 		else{
 			header("location: ".BASEURL."/C_Auth/login");
+			// $this->view('templates/header');
+			// $this->view('home/login');
+			// $this->view('templates/footer');
 		}
 	}
 	

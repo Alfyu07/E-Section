@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Tes Depresi</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-</head>
-
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 300px;	background-color: #FEA5A5; margin: 0px; align-items: middle;">
         <div class="container" style="height: 300px; width: 400px;">
             <h1 class="Judul" style="font-size: 30px; font-weight: bolder; margin: 150px 60px 100px 90px;">
-                TES DEPRESI
+            TES <?= $data;?>
             </h1>
         </div>
     </div>
@@ -24,19 +13,19 @@
             <div class="row" style="width: 400px; margin-left: 20%;">
                 <div class="col-sm">
                     <div class="container" style="width: 70;">
-                        <img src="/public/test/star 2.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 2.png" style="width: 50px; height: 50px;">
                         <p2 style="font-weight: bold;">Intruksi</p2>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="container" style="width: 70px;">
-                        <img src="/public/test/star 2.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 2.png" style="width: 50px; height: 50px;">
                         <p2 style="margin: 10px;">Tes</p2>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="container" style="width: 70px;">
-                        <img src="/public/test/star 1.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 1.png" style="width: 50px; height: 50px;">
                         <p2 style="margin: 10px;">Hasil</p2>
                     </div>
                 </div>
@@ -72,7 +61,7 @@
             </div>
         </div>
     </div>
-    <div class="container">
+    <!-- <div class="container">
         <h6 style="font-weight: bold;">Video dan Artikel Terkait</h6>
         <div class="card" style="width: 320px; height: auto;">
             <a href="#">
@@ -80,9 +69,9 @@
                     Melukai Diri Sendiri
                 </h6>
             </a>
-            <img class="card-img-top" src="/public/video/Remaja/sf.jpg" alt="Card image cap">
+            <img class="card-img-top" src="<?= BASEURL?>/video/Remaja/sf.jpg" alt="Card image cap">
         </div>
-    </div>
+    </div> -->
     <br>
 </body>
 

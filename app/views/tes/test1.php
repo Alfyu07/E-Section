@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <title>Tes Depresi</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-</head>
-
 <body style="font-family: 'Raleway', sans-serif;">
     <div class="d-flex p-2" style="height: 300px;	background-color: #FEA5A5; margin: 0px; align-items: middle;">
         <div class="container" style="height: 300px; width: 400px;">
             <h1 class="Judul" style="font-size: 30px; font-weight: bolder; margin: 150px 60px 100px 90px;">
-                TES DEPRESI
+                TES <?= $data['judul'];?>
             </h1>
         </div>
     </div>
@@ -25,19 +14,19 @@
             <div class="row" style="margin-left: 35%; width: 400px;">
                 <div class="col-sm">
                     <div class="container" style="width: 70;">
-                        <img src="/public/test/star 1.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 1.png" style="width: 50px; height: 50px;">
                         <p2 style="font-weight: bold;">Intruksi</p2>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="container" style="width: 70px;">
-                        <img src="/public/test/star 2.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 2.png" style="width: 50px; height: 50px;">
                         <p2 style="margin: 10px;">Tes</p2>
                     </div>
                 </div>
                 <div class="col-sm">
                     <div class="container" style="width: 70px;">
-                        <img src="/public/test/star 2.png" style="width: 50px; height: 50px;">
+                        <img src="<?= BASEURL?>/test/star 2.png" style="width: 50px; height: 50px;">
                         <p2 style="margin: 10px;">Hasil</p2>
                     </div>
                 </div>
@@ -96,8 +85,9 @@
         </div>
     </div>
     <div class="container" style="margin-bottom: 5%;">
-        <button class="btn btn-danger"
-            style="background-color: #BE4C4C; font-weight: bold; margin-left: 90%;">Selanjutnya</button>
+    <form action="<?=BASEURL?>/C_User/tes/<?= $data['id_judul']?>/<?= $data['id_judul']?>" method="post">
+        <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold; margin-left: 90%;">Selanjutnya</button>
+    </form>
     </div>
 </body>
 

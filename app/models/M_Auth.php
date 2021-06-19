@@ -36,25 +36,27 @@ class M_Auth {
 		$password = $data['password'];
 		$que = "SELECT * FROM user where password = '$password' and uname = '$uname'";
 		$hasil = $this->koneksi->exec($que);
-		$row = mysqli_fetch_all($hasil);
-		$umur = $this->hitung_umur($row[0][4]);
-		if($umur>=18){
-			//dewasa
-			$role = 2;
-		}
-		else if($umur>=13){
-			$role = 3;
-		}
-		else{
-			$role = 4;
-		}
-		if($role!=$row[0][5] && $row[0][5]!=1){
-			$que = "UPDATE user SET id_role=$role WHERE uname='". $row[0][0]."'";
-			$this->koneksi->exec($que);
-		}
-		$_SESSION['uname']=$row[0][0];
-		$_SESSION['id_role']=$row[0][5];
 		$num = mysqli_num_rows($hasil);
+		if ($num>0) {
+			$row = mysqli_fetch_all($hasil);
+			$umur = $this->hitung_umur($row[0][4]);
+			if($umur>=18){
+				//dewasa
+				$role = 2;
+			}
+			else if($umur>=13){
+				$role = 3;
+			}
+			else{
+				$role = 4;
+			}
+			if($role!=$row[0][5] && $row[0][5]!=1){
+				$que = "UPDATE user SET id_role=$role WHERE uname='". $row[0][0]."'";
+				$this->koneksi->exec($que);
+			}
+			$_SESSION['uname']=$row[0][0];
+			$_SESSION['id_role']=$row[0][5];
+		}
 		return $num;
 	}
 
