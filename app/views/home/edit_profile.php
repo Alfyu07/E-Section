@@ -68,8 +68,8 @@
     </div>
     <br>
     <div class="container" style="width: 250px; margin: 120px 100px 10px 620px; text-align: center;">
-        <form action="<?=BASEURL?>/C_User/save_profile/<?=$data['uname'];?>">
-            <input type="file" id="myFile" name="upload">
+        <form action="<?=BASEURL?>/C_User/save_profile/<?=$data['uname'];?>" enctype="multipart/form-data" method="post">
+            <input type="file" id="myFile" name="upload" required>
             <button type="submit" name="submit" style="width: 75px; height: 30px; margin-top: 7px;" > tambah </button>
         </form>
         <br>
@@ -95,7 +95,7 @@
                             </div>
                             <div class="col" style="margin-left: -150px;">
                                 <input name="email" type="text" id="inputPassword6" class="form-control mx-sm-3"
-                                    aria-describedby="passwordHelpInline" value="<?= $data['email'];?>">
+                                    aria-describedby="passwordHelpInline" value="<?= $data['email'];?>" required>
                             </div>
                             <div class="col" style="margin-left: -5px;">
                                 <small id="passwordHelpInline" class="text-muted">
@@ -109,7 +109,7 @@
                             </div>
                             <div class="col" style="margin-left: -150px;">
                                 <input name="passlam" type="password" id="inputPassword6" class="form-control mx-sm-3"
-                                    aria-describedby="passwordHelpInline">
+                                    aria-describedby="passwordHelpInline" required>
                             </div>
                             <div class="col" style="margin-left: -5px;">
                                 <small id="passwordHelpInline" class="text-muted">
@@ -123,7 +123,7 @@
                             </div>
                             <div class="col" style="margin-left: -150px;">
                                 <input name="passbar" type="password" id="inputPassword6" class="form-control mx-sm-3"
-                                    aria-describedby="passwordHelpInline">
+                                    aria-describedby="passwordHelpInline" required>
                             </div>
                             <div class="col" style="margin-left: -5px;">
                                 <small id="passwordHelpInline" class="text-muted">
@@ -137,7 +137,7 @@
                             </div>
                             <div class="col" style="margin-left: -150px;">
                                 <input name="confirm" type="password" id="inputPassword6" class="form-control mx-sm-3"
-                                    aria-describedby="passwordHelpInline">
+                                    aria-describedby="passwordHelpInline" required>
                             </div>
                             <div class="col" style="margin-left: -5px;">
                                 <small id="passwordHelpInline" class="text-muted">

@@ -7,7 +7,7 @@
         <?php if($row['avatar'] == ''){ ?> 
         <img src="<?= BASEURL?>/img/user.jpg" class="circle" style="margin-left: 41%;">
         <?php }else{?>
-        <img src="<?= BASEURL?>/img/upload/<?= $data['gambar'];?>" class="circle" style="margin-left: 41%;"> 
+        <img src="<?= BASEURL?>/img/upload/<?= $row['avatar'];?>" class="circle" style="margin-left: 41%;"> 
         <?php }?>
     </div>
     <br>

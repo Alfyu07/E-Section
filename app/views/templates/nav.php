@@ -71,17 +71,7 @@
             margin-left: 40%;
         }
 
-        .nav-item:active,
-        .nav-item:hover {
-            background-color: #FEA5A5;
-        }
-
-        .active {
-            background-color: #EEEEEE !important;
-            border-top-color: #BE4C4C !important;
-            border-left-color: #BE4C4C !important;
-            border-right-color: #BE4C4C !important;
-        }
+    
 
         .form-control.mx-sm-3 {
             background-color: #ffff !important;
@@ -106,18 +96,18 @@
         <div class=" collapse navbar-collapse" id="navbar1">
         <ul class="navbar-nav ">
             <li class="nav-item" style="margin-left: 25%">
-                <form class="form-inline my-2">
+                <!-- <form class="form-inline my-2">
                     <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search"
                         style="width:350px">
                     <button class="btn btn-outline-danger" type="submit">
                         Search
                     </button>
-                </form>
+                </form> -->
             </li>
             <!-- <div class="d-flex" style="background-color: transparent;"> -->
             <li class="nav-item dropdown" style="margin-right: 65px">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img src="<?=BASEURL?>/img/profile.png" style="width: 45px;">
+                    <img src="<?=BASEURL?>/img/button.jpg" style="width: 45px;">
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <img src="<?=BASEURL?>/img/profile.png" width="50px"  >

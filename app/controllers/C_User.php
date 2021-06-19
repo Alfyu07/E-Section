@@ -65,6 +65,7 @@ class C_User extends Controller{
     }
 
     public function save_profile($uname){
+        $email="a";
 		$target_dir = "C:/xampp/htdocs/E-Section/public/img/upload/";
 		$target_file = $target_dir . basename($_FILES["upload"]["name"]);
 		//$_POST['gambar']=$_FILES["upload"]["name"];
