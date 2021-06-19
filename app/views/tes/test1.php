@@ -85,7 +85,7 @@
         </div>
     </div>
     <div class="container" style="margin-bottom: 5%;">
-    <form action="<?=BASEURL?>/C_User/tes/<?= $data['id_judul']?>/<?= $data['id_judul']?>" method="post">
+    <form action="<?=BASEURL?>/C_User/tes/<?= $data['id_judul']?>/<?= $data['judul']?>" method="post">
         <button type="submit" class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold; margin-left: 90%;">Selanjutnya</button>
     </form>
     </div>

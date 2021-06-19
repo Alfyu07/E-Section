@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+use function PHPSTORM_META\map;
 
 class M_User{
     private $data;
@@ -83,6 +85,21 @@ class M_User{
 		$que = "SELECT pertanyaan FROM soal WHERE id_judul='$data'";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
+	}
+
+	public function get_label($data){
+		$que = "SELECT label FROM judul_soal WHERE id_judul='$data'";
+		$hasil = $this->koneksi->exec($que);
+		// var_dump($hasil);
+		$hasil = mysqli_fetch_all($hasil);
+		return $hasil[0][0];
+	}
+
+	public function get_Role_byId($data){
+		$que = "SELECT id_role FROM judul_soal WHERE id_judul='$data'";
+		$hasil = $this->koneksi->exec($que);
+		$hasil = mysqli_fetch_all($hasil);
+		return $hasil[0][0];
 	}
 }
 

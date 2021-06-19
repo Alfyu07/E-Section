@@ -69,47 +69,46 @@
           satu masalah berikut?
         </h6>
         <br />
-        
+      
         <table class="table">
-        <?php foreach($data['isi'] as $row): ?>
-          <tr style="border-color: #be4c4c">
-            <th scope="row" style="width: 60px">
-              <img
-                src="<?= BASEURL?>/test/Kotak.png"
-                style="width: 30px; height: auto"
-              />
-            </th>
-            
-            <td>
-              <?=$row['pertanyaan'];?>
-              <br />
-                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                  <label class="btn btn-secondary active">
-                    <input type="radio" name="options1" id="option1" checked />
-                    <?= $row['pertanyaan'];?>
-                  </label>
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option2" /> Iya
-                  </label>
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option3" /> Netral
-                  </label>
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option4" /> Tidak
-                  </label>
-                  <label class="btn btn-secondary">
-                    <input type="radio" name="options" id="option3" /> Sangat
-                    Tidak
-                  </label>
-                </div>
-            </td>
-            
-          </tr>
+        <form action="<?=BASEURL?>/C_User/hasilTes/<?= $data['id_judul'];?>/<?= $data['judul'];?>" method="post">
+          <?php $i=1; foreach($data['isi'] as $row): ?>
+            <tr style="border-color: #be4c4c">
+              <th scope="row" style="width: 60px">
+                <img
+                  src="<?= BASEURL?>/test/Kotak.png"
+                  style="width: 30px; height: auto"
+                />
+              </th>
+              
+              <td>
+                <?=$row['pertanyaan'];?>
+                <br />
+                  <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options<?= $i; $i++; ?>" id="option1" value=5> Sangat Iya
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options<?= $i; $i++; ?>" id="option2" value=4> Iya
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options<?= $i; $i++; ?>" id="option3" value=3> Netral
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options<?= $i; $i++; ?>" id="option4" value=2> Tidak
+                    </label>
+                    <label class="btn btn-secondary">
+                      <input type="radio" name="options<?= $i; $i++; ?>" id="option5" value=1> Sangat
+                      Tidak
+                    </label>
+                  </div>
+              </td>
+              
+            </tr>
           <?php endforeach; ?>
         </table>
       </div>
     </div>
-    <form action="<?=BASEURL?>/C_User/hasilTes/" method="post">
     <div class="container" style="margin-bottom: 5%">
     
       <button type="submit" class="btn btn-danger" style="background-color: #be4c4c; font-weight: bold; margin-left: 90%">

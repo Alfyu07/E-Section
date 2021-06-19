@@ -126,14 +126,42 @@ class C_User extends Controller{
         // var_dump($id);
         $data['isi'] = $id;
         $data['judul'] =$judul;
+        $data['id_judul'] =$test;
+        // var_dump($data);
         $this->view('templates/navv');
         $this->view('tes/test2',$data);
         $this->view('templates/footer');
     }
 
-    public function hasilTes($test){
+    public function hasilTes($id_judul, $judul){
+        $data['id_role'] = $this->model("M_User")->get_Role_byId($id_judul);
+        $label = $this->model("M_User")->get_label($id_judul);
+        $larray = explode('/', $label);
+        $hasil=0;
+        $jum=0;
+        foreach($_POST as $row){
+            $hasil+=$row;
+            $jum+=1;
+        }
+        $max = $jum*5;
+
+        $kategori=1;
+
+        if ($hasil>=0.75*$max) {
+            $kategori=1;
+        } elseif ($hasil>=0.5*$max) {
+            $kategori=2;
+        } elseif ($hasil>=0.25*$max) {
+            $kategori=3;
+        } else {
+            $kategori=4;
+        }
+        $data['maks'] = $max;
+        $data['hasil'] = $hasil;
+        $data['kategori'] = $larray[$kategori-1];
+        $data['judul'] = $judul;
         $this->view('templates/navv');
-        $this->view('tes/test3',$test);
+        $this->view('tes/test3',$data);
         $this->view('templates/footer');
     }
 

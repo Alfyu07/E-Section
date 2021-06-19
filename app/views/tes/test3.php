@@ -2,7 +2,7 @@
     <div class="d-flex p-2" style="height: 300px;	background-color: #FEA5A5; margin: 0px; align-items: middle;">
         <div class="container" style="height: 300px; width: 400px;">
             <h1 class="Judul" style="font-size: 30px; font-weight: bolder; margin: 150px 60px 100px 90px;">
-            TES <?= $data;?>
+            TES <?= $data['judul'];?>
             </h1>
         </div>
     </div>
@@ -33,24 +33,25 @@
             <div class="row" style="margin-top: 5%;">
                 <div class="container" style="width: 600px; background-color:#BE4C4C;">
                     <h6 style="color: #ffff; margin-top: 10px;">Hasil Dari Test Anda Adalah</h6>
-                    <h3 style="font-weight: bold; color: #ffff;">DEPRESI AKUT</h3>
+                    <h3 style="font-weight: bold; color: #ffff;"><?= $data['kategori']?></h3>
                 </div>
             </div>
             <div class="row" style="margin-top: 5%;">
                 <div class="container" style="width: 250px; background-color:#DE7E7E; margin: 0px 20px 0px 50px;">
-                    <h6 style="color: #ffff; margin-top: 10px; text-align: center;">Total skor anda ialah 20/20</h6>
+                    <h6 style="color: #ffff; margin-top: 10px; text-align: center;">Total skor anda ialah <?= $data['hasil']?>/<?= $data['maks']?></h6>
                 </div>
+                <form action="<?=BASEURL?>/C_User/list_test/<?= $data['id_role']?>/<?= $data['judul']?>" method="post">
                 <button class="btn btn-danger"
                     style="width: 250px; background-color:#BE4C4C;margin: 0px 40px 0px 80px;">
                     Ambil tes lain
                 </button>
-
+                </form>
             </div>
             <br>
             <div class="row" style="margin-top: 5%;">
                 <div class="container" style="margin-left: 50px;">
                     <h5 style="font-weight:bold;">
-                        Berdasarkan hasil test 20/20. Anda memiliki Depresi Akut
+                        Berdasarkan hasil test <?= $data['hasil']?>/<?= $data['maks']?>. Anda memiliki <?= $data['kategori']?>
                     </h5>
                     <h6>Test ini hanya digunakan untuk mengedukasi
                         dan membantu pengguna untuk memahami diri mereka sendiri.
