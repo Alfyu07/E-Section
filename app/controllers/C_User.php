@@ -12,20 +12,20 @@ class C_User extends Controller{
     public function list_konten($id){
 		// var_dump($id);
 		$data['id_role']=$id;
-		$data['jum']= $this->model("M_Admin")->count_conten($id);
-		$data['isi']=$this->model("M_Admin")->get_conten($id);
-		$this->view('templates/nav');
+		$data['jum']= $this->model("M_User")->count_conten($id);
+		$data['isi']=$this->model("M_User")->get_conten($id);
+		$this->view('templates/navv');
 		$this->view('admin/konten', $data);
 		$this->view('templates/footer');
 	}
 
     public function list_test($id){
 		$data['id_role']=$id;
-		$data['jum']= $this->model("M_Admin")->count_test($id);
+		$data['jum']= $this->model("M_User")->count_test($id);
 		$ket = $this->model("M_User")->get_judul_byRole($data['id_role']);
 		$data['isi'] = $ket;
         // var_dump($ket);
-		$this->view('templates/nav');
+		$this->view('templates/navv');
 		$this->view('admin/menu_test', $data);
 		$this->view('templates/footer');
 	}
@@ -33,9 +33,9 @@ class C_User extends Controller{
     public function list_artikel($id){
 		// var_dump($id);
 		$data['id_role']=$id;
-		$data['jum']= $this->model("M_Admin")->count_artikel($id);
-		$data['isi']=$this->model("M_Admin")->get_artikel($id);
-		$this->view('templates/nav');
+		$data['jum']= $this->model("M_User")->count_artikel($id);
+		$data['isi']=$this->model("M_User")->get_artikel($id);
+		$this->view('templates/navv');
 		$this->view('admin/artikel', $data);
 		$this->view('templates/footer');
 	}
@@ -43,19 +43,25 @@ class C_User extends Controller{
     public function list_sc($id){
 		$data['id_role']=$id;
 		// $data['jum']= $this->model("M_Admin")->count_sc($id);
-		$data['isi1']=$this->model("M_Admin")->get_scArtikel($id);
-		$data['isi2']=$this->model("M_Admin")->get_scVideo($id);
+		$data['isi1']=$this->model("M_User")->get_scArtikel($id);
+		$data['isi2']=$this->model("M_User")->get_scVideo($id);
 		// var_dump($data);
-		$this->view('templates/nav');
+		$this->view('templates/navv');
 		$this->view('admin/source', $data);
 		$this->view('templates/footer');
 	}
 
     public function profil(){
 		$hasil = $this->model("M_User")->get_profil($_SESSION['uname']);
+        $tgl =  $this->model("M_User")->get_tgl_tes($_SESSION['uname']);
+        $tgl = mysqli_fetch_all($tgl);
+        // var_dump($tgl);
+        $data['hasil'] =$hasil;
+        $data['tgl'] = $tgl[0][0];
+        // echo $tgl;
         // var_dump(mysqli_fetch_assoc($hasil));
         $this->view('templates/navv');
-        $this->view('home/profile', $hasil);
+        $this->view('home/profile', $data);
         $this->view('templates/footer');
 	}
 
@@ -160,6 +166,8 @@ class C_User extends Controller{
         $data['hasil'] = $hasil;
         $data['kategori'] = $larray[$kategori-1];
         $data['judul'] = $judul;
+
+        $this->model('M_User')->add_riwayat($data);
         $this->view('templates/navv');
         $this->view('tes/test3',$data);
         $this->view('templates/footer');

@@ -1,7 +1,7 @@
 
 
 <body style="font-family: 'Raleway', sans-serif;">
-    <?php foreach($data as $row): ?>
+    <?php foreach($data['hasil'] as $row): ?>
     <div class="d-flex p-2" style="height: 250px;	background-color: #FEA5A5; margin: 0px; align-items: left;">
        
         <?php if($row['avatar'] == ''){ ?> 
@@ -54,7 +54,7 @@
                 </h6>
                 <div class="container"
                     style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 0px 10px 10px 10px; background-color: white; color: #BE4C4C;">
-                    <p3>Diambil Pada 03-05-2021</p3>
+                    <p3>Diambil Pada <?= $data['tgl'];?></p3>
                 </div>
             </div>
         </div>

@@ -211,7 +211,13 @@ class M_Admin{
 		return $hasil;
 	}
 
-
+	public function kontenTag($tag, $id){
+		$que = "SELECT * FROM konten WHERE tag LIKE '%$tag%' AND id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		$data['isi']=$hasil;
+		$data['jum']=mysqli_num_rows($hasil);
+		return $data;
+	}
 
 }
 

@@ -315,6 +315,17 @@ class C_Admin extends Controller{
 		$this->view('templates/footer');
 	}
 	
+	public function list_kontenTag($tag, $id){
+		$data['id_role'] = $id;
+		$hasil = $this->model("M_Admin")->kontenTag($tag, $id);
+		$data['isi'] = $hasil['isi'];
+		$data['jum']= $hasil['jum'];;
+		// $data['isi']=$this->model("M_Admin")->get_conten($id);
+		// var_dump($data);
+		$this->view('templates/nav');
+		$this->view('admin/konten', $data);
+		$this->view('templates/footer');
+	}
 	
 }
 

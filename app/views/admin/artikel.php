@@ -26,10 +26,11 @@
     </div>
     <br>
     <div class="container" style="margin-left: 10%;">
+    <?php if($_SESSION['id_role']==1):?>
         <form action="<?=BASEURL?>/C_Admin/add_artikel/<?= $data['id_role']?>" method="get">
             <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
         </form>
-        
+    <?php endif;?>
     </div>
     <br>
     <div class="d-flex p-2"

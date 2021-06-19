@@ -26,10 +26,11 @@
     </div>
     <br>
     <div class="container" style="margin-left: 10%;">
+    <?php if($_SESSION['id_role']==1):?>
         <form action="<?=BASEURL?>/C_Admin/add_konten/<?= $data['id_role']?>" method="get">
             <button class="btn btn-danger" style="background-color: #BE4C4C; font-weight: bold;">TAMBAH</button>
         </form>
-        
+    <?php endif;?>   
     </div>
     <br>
     <div class="d-flex p-2"
@@ -61,7 +62,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_kontenTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -91,7 +92,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_kontenTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -121,7 +122,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_kontenTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>

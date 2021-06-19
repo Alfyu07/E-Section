@@ -73,9 +73,6 @@
             <button type="submit" name="submit" style="width: 75px; height: 30px; margin-top: 7px;" > tambah </button>
         </form>
         <br>
-        <h5 style="color: #BE4C4C;">
-            @Sarah_33
-        </h5>
     </div>
 
     <div class=" container" style="width: 800px; margin-bottom: 5%;">

@@ -101,6 +101,27 @@ class M_User{
 		$hasil = mysqli_fetch_all($hasil);
 		return $hasil[0][0];
 	}
+
+	public function add_riwayat($data){
+		$uname = $_SESSION['uname'];
+		$result = $data['hasil'];
+		$tgl = new DateTime("today");
+		
+		$tgl = $tgl->format('Y-m-d');
+		$que = "INSERT INTO riwayat VALUES (null, '$uname','$result', '$tgl' )";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function get_tgl_tes () {
+		$uname = $_SESSION['uname'];
+		$que = "SELECT tgl_tes FROM riwayat WHERE uname = '$uname' ORDER BY tgl_tes DESC LIMIT 1 ";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+
+
 }
 
 ?>
