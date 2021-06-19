@@ -62,7 +62,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_artikelTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -73,7 +73,7 @@
                     }
                     else if($i%3==2){
                         echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
-                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                    <a href="'.BASEURL.'/C_Admin/ArtikelPage/'.$row['id_artikel'].'" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
@@ -92,7 +92,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_artikelTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>
@@ -103,7 +103,7 @@
                     }
                     else if($i%3==0 || $i==$num){
                         echo '<div class="card" style="width: 20rem; margin: 30px 25px;">
-                    <a href="#" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
+                    <a href="'.BASEURL.'/C_Admin/ArtikelPage/'.$row['id_artikel'].'" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
@@ -122,7 +122,7 @@
                             <br/>';
                             $tag = explode('/', $row['tag']);
                             for($j = 0; $j < count($tag); $j++){
-                                echo '<a class="btn btn-primary" href="#" role="button">'.$tag[$j].'</a>';
+                                echo '<a class="btn btn-primary" href="'.BASEURL.'/C_Admin/list_artikelTag/'.$tag[$j].'/'.$row['id_role'].'" role="button">'.$tag[$j].'</a>';
                             }
                         echo '</p>
                     </div>

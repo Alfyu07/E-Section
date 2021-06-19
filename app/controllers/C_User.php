@@ -54,10 +54,9 @@ class C_User extends Controller{
     public function profil(){
 		$hasil = $this->model("M_User")->get_profil($_SESSION['uname']);
         $tgl =  $this->model("M_User")->get_tgl_tes($_SESSION['uname']);
-        $tgl = mysqli_fetch_all($tgl);
         // var_dump($tgl);
         $data['hasil'] =$hasil;
-        $data['tgl'] = $tgl[0][0];
+        $data['isi'] =$tgl;
         // echo $tgl;
         // var_dump(mysqli_fetch_assoc($hasil));
         $this->view('templates/navv');

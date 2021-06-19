@@ -115,7 +115,7 @@ class M_Admin{
 	}
 
 	public function get_judul_byRole($data){
-		$que = "SELECT judul, deskripsi FROM judul_soal WHERE id_role='$data'";
+		$que = "SELECT * FROM judul_soal WHERE id_role='$data'";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
@@ -175,9 +175,9 @@ class M_Admin{
 		$materi = $data['materi'];
 		$fakta = $data['fakta'];
 		$tag = $data['tag'];
-		$que = "UPDATE artikel SET judul='$judul', source='$source', materi='$materi', fakta='$fakta', tag='$tag' WHERE id_konten='$id_konten'";
+		$que = "UPDATE artikel SET judul='$judul', source='$source', materi='$materi', fakta='$fakta', tag='$tag' WHERE id_artikel='$id_konten'";
 		$hasil = $this->koneksi->exec($que);
-		return $hasil;
+		return $que;
 	}
 
 	public function get_scArtikel($data){
@@ -219,6 +219,13 @@ class M_Admin{
 		return $data;
 	}
 
+	public function artikelTag($tag, $id){
+		$que = "SELECT * FROM artikel WHERE tag LIKE '%$tag%' AND id_role='$id'";
+		$hasil = $this->koneksi->exec($que);
+		$data['isi']=$hasil;
+		$data['jum']=mysqli_num_rows($hasil);
+		return $data;
+	}
 }
 
 

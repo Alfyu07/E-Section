@@ -46,16 +46,19 @@
             </div>
             <div class="tab-pane fade " id="tes" role="tabpanel" aria-labelledby="tes"
                 style="border:2px solid#BE4C4C; background-color: #EEEEEE;">
+            <?php foreach($data['isi'] as $row): ?>
                 <h6 style="font-weight: bold; margin: 10px 10px 10px 10px">
                     <button type="button" class="btn btn-danger"
                         style="background-color: #fff; color:#BE4C4C; font-weight: bold;">
-                        Tes Depresi
+                        <?= $row['judul']?>
                     </button>
                 </h6>
                 <div class="container"
                     style="width: 360px; height: 40px; border:1px solid#BE4C4C; margin: 0px 10px 10px 10px; background-color: white; color: #BE4C4C;">
-                    <p3>Diambil Pada <?= $data['tgl'];?></p3>
+                    <p3>Diambil Pada <?= $row['tgl_tes'];?></p3>
                 </div>
+            <br>
+            <?php endforeach;?>
             </div>
         </div>
     </div>

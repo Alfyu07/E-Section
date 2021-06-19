@@ -12,7 +12,7 @@
             <!-- FORM START -->
             <?php foreach($data['isi'] as $row):?>
                 <div class="row">
-                    <form action="<?= BASEURL?>/C_Admin/update_foto/<?= $row['id_artikel']?>/<?= $row['id_role']?>" method="post" enctype="multipart/form-data">
+                    <form action="<?= BASEURL?>/C_Admin/update_fotoA/<?= $row['id_artikel']?>/<?= $row['id_role']?>" method="post" enctype="multipart/form-data">
                         <div class="col-sm-4">
                             <div class="card" style="width: 20rem;">
                                 <img class="card-img-top" src="<?=BASEURL?>/img/upload/<?= $row['gambar']?>" alt="Add Foto" style="height: 11rem;">
@@ -24,7 +24,7 @@
                         </div>
                     </form>               
                         <div class="col-sm-8">
-                            <form action="<?= BASEURL?>/C_Admin/edit/<?= $row['id_artikel']?>/<?= $row['id_role']?>" method="post"> 
+                            <form action="<?= BASEURL?>/C_Admin/editArtikel/<?= $row['id_artikel']?>/<?= $row['id_role']?>" method="post"> 
                                 <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL MATERI</label>
                                 <div class="input-group input-group-lg">
                                     <input name="judul" type="text" class="form-control" aria-label="Large"

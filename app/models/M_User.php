@@ -106,17 +106,20 @@ class M_User{
 		$uname = $_SESSION['uname'];
 		$result = $data['hasil'];
 		$tgl = new DateTime("today");
-		
+		$judul = $data['judul'];
 		$tgl = $tgl->format('Y-m-d');
-		$que = "INSERT INTO riwayat VALUES (null, '$uname','$result', '$tgl' )";
+		$que = "INSERT INTO riwayat VALUES (null, '$uname','$result', '$tgl', '$judul')";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
 
 	public function get_tgl_tes () {
 		$uname = $_SESSION['uname'];
-		$que = "SELECT tgl_tes FROM riwayat WHERE uname = '$uname' ORDER BY tgl_tes DESC LIMIT 1 ";
+		$que = "SELECT tgl_tes,judul FROM riwayat WHERE uname = '$uname' GROUP BY judul ORDER BY tgl_tes";
 		$hasil = $this->koneksi->exec($que);
+		// $hasil = mysqli_fetch_all($hasil);
+		// $data['tgl'] = $hasil[0][0];
+		// $data['judul'] = $hasil[0][1];
 		return $hasil;
 	}
 

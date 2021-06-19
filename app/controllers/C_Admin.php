@@ -92,7 +92,7 @@ class C_Admin extends Controller{
 			header('location: '.BASEURL.'/C_Admin/list_konten/'.$role);
 		}
 		else{
-			header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+			header('location: '.BASEURL.'/C_Admin/update_konten/'.$id.'/'.$role);
 		}
 	}
 
@@ -246,13 +246,13 @@ class C_Admin extends Controller{
 				if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
 					$data['id_konten']=$id;
 					if($this->model("M_Admin")->up_foto($data)){
-						header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+						header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id);
 					}
 					else {
-						header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+						header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id);
 					}
 				} else {
-					header('location: '.BASEURL.'/C_Admin/update_konten/'.$id);
+					header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id);
 				}
 			}
 		}
@@ -262,11 +262,13 @@ class C_Admin extends Controller{
 		$data['id'] = $id;
 		$data['isi'] = $_POST;
 		$_POST['id_artikel']=$id;
+		// $hasil = $this->model("M_Admin")->updateArtikel($_POST);
+		// echo $hasil;
 		if($this->model("M_Admin")->updateArtikel($_POST)){
 			header('location: '.BASEURL.'/C_Admin/list_artikel/'.$role);
 		}
 		else{
-			header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id);
+			header('location: '.BASEURL.'/C_Admin/update_artikel/'.$id.'/'.$role);
 		}
 	}
 
@@ -319,14 +321,21 @@ class C_Admin extends Controller{
 		$data['id_role'] = $id;
 		$hasil = $this->model("M_Admin")->kontenTag($tag, $id);
 		$data['isi'] = $hasil['isi'];
-		$data['jum']= $hasil['jum'];;
-		// $data['isi']=$this->model("M_Admin")->get_conten($id);
-		// var_dump($data);
+		$data['jum']= $hasil['jum'];
 		$this->view('templates/nav');
 		$this->view('admin/konten', $data);
 		$this->view('templates/footer');
 	}
-	
+
+	public function list_artikelTag($tag, $id){
+		$data['id_role'] = $id;
+		$hasil = $this->model("M_Admin")->artikelTag($tag, $id);
+		$data['isi'] = $hasil['isi'];
+		$data['jum']= $hasil['jum'];
+		$this->view('templates/nav');
+		$this->view('admin/artikel', $data);
+		$this->view('templates/footer');
+	}
 }
 
 ?>

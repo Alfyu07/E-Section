@@ -24,23 +24,23 @@
                         <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL ARTIKEL</label>
                         <div class="input-group input-group-lg">
                             <input name="judul" type="text" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm" required>
+                                aria-describedby="inputGroup-sizing-sm" required autocomplete="off">
                         </div>
                         <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">SOURCE</label>
                         <div class="input-group input-group-lg">
                             <input name="source" type="text" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm" required>
+                                aria-describedby="inputGroup-sizing-sm" required autocomplete="off">
                         </div>
                         <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">TAG</label>
                         <div class="input-group input-group-lg">
                             <input name="tag" type="text" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm" required>
+                                aria-describedby="inputGroup-sizing-sm" required autocomplete="off">
                         </div>
                     </div>
                 </div>
                 <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">MATERI</label>
                 <div class="input-group input-group-lg">
-                    <input name="materi" type="textarea" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" style="height: 7rem" required>
+                    <input name="materi" type="textarea" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" style="height: 7rem" required autocomplete="off">
                 </div>
                 <br>
                 <table class="table">
@@ -52,7 +52,7 @@
                     <tbody style="background-color: white;">
                         <tr>
                             <td><input name="fakta" type="textarea" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm" style="height: 7rem" required></td>
+                                aria-describedby="inputGroup-sizing-sm" style="height: 7rem" required autocomplete="off"></td>
                         </tr>
                     </tbody>
                 </table>
