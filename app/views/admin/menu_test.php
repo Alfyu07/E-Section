@@ -36,15 +36,14 @@
                                 <p2 class="isi">
                                     <?= $row['deskripsi']?>
                                 </p2>
-                                <!-- <div class="card-body" style="background-color: #FEA5A5;">
-                                    <p p class="card-text">
-                                        Tag:
-                                    <div class="container"
-                                        style="background-color: #BE4C4C; width: max-content; height: auto;   float: left;">
-                                        <p1 style="color: #EEEEEE;">ADHD</p1>
-                                    </div>
-                                    </p>
-                                </div> -->
+                                <?php if($_SESSION['id_role']==1){?>
+                                <div class="btn">
+                                    <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="<?= BASEURL?>/C_Admin/update_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >EDIT</a>
+                                </div>
+                                <div class="btn">
+                                <a onclick="return confirm('Apakah Anda yakin?');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="<?= BASEURL?>/C_Admin/delete_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >DELETE</a>
+                                </div>
+                                <?php }?>
                             </div>
                         <?php if($i==$num):?>
                                 </div>
@@ -57,36 +56,34 @@
                                 <p2 class="isi">
                                     <?= $row['deskripsi']?>
                                 </p2>
-                                <!-- <div class="card-body" style="background-color: #FEA5A5;">
-                                    <p p class="card-text">
-                                        Tag:
-                                    <div class="container"
-                                        style="background-color: #BE4C4C; width: max-content; height: auto;   float: left;">
-                                        <p1 style="color: #EEEEEE;">Bipolar</p1>
-                                    </div>
-                                    </p>
-                                </div> -->
+                                <?php if($_SESSION['id_role']==1){?>
+                                <div class="btn">
+                                    <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="<?= BASEURL?>/C_Admin/update_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >EDIT</a>
+                                </div>
+                                <div class="btn">
+                                <a onclick="return confirm('Apakah Anda yakin?');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="<?= BASEURL?>/C_Admin/delete_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >DELETE</a>
+                                </div>
+                                <?php }?>
                             </div>
                         <?php if($i==$num):?>
                                 </div>
                         <?php endif;?>
                     <?php elseif($i%3==0 || $i==$num):?>
                             <div class="card" style="width: 20rem; margin: 30px 1px 30px 1px;">
-                                <a href="<?= BASEURL?>/C_User/mengtes/<?= $row['id_judul']?>" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">\
+                                <a href="<?= BASEURL?>/C_User/mengtes/<?= $row['id_judul']?>" style="background-color: #BE4C4C; color: aliceblue; text-align: center;">
                                     <?= $row['judul']?>
                                 </a>
                                 <p2 class="isi">
                                     <?= $row['deskripsi']?>
                                 </p2>
-                                <!-- <div class="card-body" style="background-color: #FEA5A5;">
-                                    <p p class="card-text">
-                                        Tag:
-                                    <div class="container"
-                                        style="background-color: #BE4C4C; width: max-content; height: auto;   float: left;">
-                                        <p1 style="color: #EEEEEE;">Depresi</p1>
-                                    </div>
-                                    </p>
-                                </div> -->
+                                <?php if($_SESSION['id_role']==1){?>
+                                <div class="btn">
+                                    <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="<?= BASEURL?>/C_Admin/update_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >EDIT</a>
+                                </div>
+                                <div class="btn">
+                                <a onclick="return confirm('Apakah Anda yakin?');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="<?= BASEURL?>/C_Admin/delete_test/<?= $row['id_judul'];?>/<?= $row['id_role'];?>" >DELETE</a>
+                                </div>
+                                <?php }?>
                             </div>
                         </div>
                     <?php endif;?>

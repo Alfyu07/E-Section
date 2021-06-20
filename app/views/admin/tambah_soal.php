@@ -48,13 +48,13 @@
                                 <td><?= $row['pertanyaan']?></td>
                                 <!-- <td style="width: 10%"><input type="button" class="btn btn-danger" style="background-color: #BE4C4C;" value="DELETE"></td> -->
                                 <?php if($row['pertanyaan']!=""):?>
-                                    <td style="width: 10%"><a href="<?= BASEURL?>/C_Admin/hapus_soal/<?=$row['pertanyaan']?>" onclick="return confirm('Apakah Anda yakin?');" class="btn btn-danger" role="button" style="background-color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: white; margin: 0px 0px 0px 5px;">DELETE</a></td>
+                                    <td style="width: 10%"><a href="<?= BASEURL?>/C_Admin/hapus_soal/<?=$row['id_soal']?>/<?=$row['id_judul']?>" onclick="return confirm('Apakah Anda yakin?');" class="btn btn-danger" role="button" style="background-color: #BE4C4C; border-color: #BE4C4C; border-radius: 5px; width: 100px; color: white; margin: 0px 0px 0px 5px;">DELETE</a></td>
                                 <?php endif;?>
                             </tr>
                             <?php endforeach;?>
                         </tbody>
                     </table>
-                    <input type="text" name="soal">
+                    <input type="text" name="soal" autocomplete="off">
                     <button type="submit" name="add" class="btn btn-danger" style="background-color: #BE4C4C ;">ADD</button>
                     <br>
                     <div class="row justify-content-center">

@@ -136,17 +136,18 @@ class C_Admin extends Controller{
 		}
 	}  
 
-	public function hapus_soal($soal){
-		$hasil = $this->model("M_Admin")->get_id_bySoal($soal);
-		$result = mysqli_fetch_all($hasil);
-		$data['id_judul'] = $result[0][1];
-		$data['id_soal'] = $result[0][0];
-		$ket = $this->model("M_Admin")->get_judul_byId($data['id_judul']);
+	public function hapus_soal($id_soal, $id_judul){
+		// $hasil = $this->model("M_Admin")->get_id_bySoal($soal);
+		// $result = mysqli_fetch_all($hasil);
+		// $data['id_judul'] = $result[0][1];
+		// $data['id_soal'] = $result[0][0];
+		$ket = $this->model("M_Admin")->get_judul_byId($id_judul);
 		$keterangan = mysqli_fetch_all($ket);
 		$data['judul'] = $keterangan[0][0];
 		$data['desc'] = $keterangan[0][1];
-		if($this->model("M_Admin")->delete_soal($data['id_soal'])){
-			$data['soal'] = $this->model("M_Admin")->get_soal_byId($data['id_judul']);
+		$data['id_judul'] = $id_judul;
+		if($this->model("M_Admin")->delete_soal($id_soal)){
+			$data['soal'] = $this->model("M_Admin")->get_soal_byId($id_judul);
 			$this->view('templates/nav');
 			$this->view('admin/tambah_soal', $data);
 			$this->view('templates/footer');
@@ -273,8 +274,8 @@ class C_Admin extends Controller{
 	}
 
 	public function delete_artikel($id, $role){
-		if($this->model("M_Admin")->delete($id)){
-			header('location: '.BASEURL.'/C_Admin/list_konten/'.$role);
+		if($this->model("M_Admin")->deleteArtikel($id)){
+			header('location: '.BASEURL.'/C_Admin/list_artikel/'.$role);
 		}
 	}
 
@@ -335,6 +336,36 @@ class C_Admin extends Controller{
 		$this->view('templates/nav');
 		$this->view('admin/artikel', $data);
 		$this->view('templates/footer');
+	}
+
+	public function update_test($id, $role){
+		$data['id_judul']=$id;
+		$data['id_role'] = $role;
+		$hasil = $this->model("M_Admin")->get_test_byId($id);
+		$hasil = mysqli_fetch_all($hasil);
+		$data['judul'] = $hasil[0][2];
+		$data['desc'] = $hasil[0][3];
+		$this->view('templates/nav');
+		$this->view('admin/edit_test', $data);
+		$this->view('templates/footer');
+	}
+
+	public function editTest($id, $role){
+		$data['id'] = $id;
+		$data['isi'] = $_POST;
+		$_POST['id_judul']=$id;
+		if($this->model("M_Admin")->updateTest($_POST)){
+			header('location: '.BASEURL.'/C_Admin/list_test/'.$role);
+		}
+		else{
+			header('location: '.BASEURL.'/C_Admin/update_test/'.$id.'/'.$role);
+		}
+	}
+
+	public function delete_test($id, $role){
+		if($this->model("M_Admin")->deleteTest($id)){
+			header('location: '.BASEURL.'/C_Admin/list_test/'.$role);
+		}
 	}
 }
 

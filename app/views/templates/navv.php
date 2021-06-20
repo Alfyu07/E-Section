@@ -158,16 +158,20 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             VIDEO
                         </a>
+                        
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
                             style="box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.1); border-radius: 10%; ">
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_konten/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php if ($_SESSION['id_role']==3){ ?> 
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
                             <a href="<?=BASEURL?>/C_User/list_konten/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php }if ($_SESSION['id_role']==2){?>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_konten/2" style="left: 60%;">Dewasa</a> <br>
+                            <?php } ?>
                         </div>
                     </li>
 
@@ -181,14 +185,17 @@
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_artikel/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php if ($_SESSION['id_role']==3){ ?> 
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
                             <a href="<?=BASEURL?>/C_User/list_artikel/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php }if ($_SESSION['id_role']==2){?>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_artikel/2" style="left: 60%;">Dewasa</a> <br>
+                            <?php } ?>
                         </div>
                     </li>
-
+                    <?php if ($_SESSION['id_role']!=4){ ?>
                     <li class="nav-item dropdown" style="padding-right: 275px;">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -199,11 +206,13 @@
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_test/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php if ($_SESSION['id_role']==2){ ?>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_test/2" style="left: 60%;">Dewasa</a> <br>
+                            <?php } ?>
                         </div>
                     </li>
-
+                    <?php } ?>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -214,11 +223,14 @@
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_sc/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php if ($_SESSION['id_role']<=3){ ?>
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_sc/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
+                            <?php } if ($_SESSION['id_role']==2){ ?>
                             <img src="<?=BASEURL?>/img/Dewasa.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_sc/2" style="left: 60%;">Dewasa</a> <br>
+                            <?php } ?>
                         </div>
                     </li>
                 </ul>

@@ -24,14 +24,14 @@
                         <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">JUDUL TEST</label>
                         <div class="input-group input-group-lg">
                             <input name="judul" type="text" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm">
+                                aria-describedby="inputGroup-sizing-sm" autocomplete="off">
                         </div>
                     </div>
                     <div class="col-sm">
                         <label style="font-size: 18px;; font-weight: bolder; padding: 0px;">Deskripsi</label>
                         <div class="input-group input-group-lg">
                             <input name="desc" type="text" class="form-control" aria-label="Large"
-                                aria-describedby="inputGroup-sizing-sm">
+                                aria-describedby="inputGroup-sizing-sm" autocomplete="off">
                         </div>
                     </div>
                 </div>

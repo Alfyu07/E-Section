@@ -47,15 +47,18 @@
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
-                    <div class="card-body" style="background-color: #FEA5A5;">
-                        <div class="btn">
+                    <div class="card-body" style="background-color: #FEA5A5;">';
+                   
+                    if($_SESSION['id_role']==1) {echo
+                        '<div class="btn">
                             <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'">EDIT</a>
                         </div>
                         <div class="btn">
                             <a onclick="return confirm('."'"."Apakah Anda yakin?"."'".');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/delete_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
-                        </div>
+                        </div>';}
+                        echo'
                         <br>
                         <p class="card-text">
                             Tag:
@@ -77,7 +80,8 @@
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
-                    <div class="card-body" style="background-color: #FEA5A5;">
+                    <div class="card-body" style="background-color: #FEA5A5;">';
+                    if($_SESSION['id_role']==1) {echo'
                         <div class="btn">
                             <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >EDIT</a>
@@ -85,7 +89,8 @@
                         <div class="btn">
                             <a onclick="return confirm('.'"Apakah Anda yakin?"'.');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
-                        </div>
+                        </div>';}
+                        echo'
                         <br>
                         <p class="card-text">
                             Tag:
@@ -107,7 +112,8 @@
                         '.$row['judul'].'
                     </a>
                     <img class="card-img-top" src="'.BASEURL.'/img/upload/'.$row['gambar'].'" alt="Card image cap">
-                    <div class="card-body" style="background-color: #FEA5A5;">
+                    <div class="card-body" style="background-color: #FEA5A5;">';
+                    if($_SESSION['id_role']==1) {echo'
                         <div class="btn">
                             <a class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 10px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >EDIT</a>
@@ -115,7 +121,8 @@
                         <div class="btn">
                             <a onclick="return confirm('.'"Apakah Anda yakin?"'.');" class="btn" role="button" style="background-color: white; border-color: #BE4C4C; 
                             border-radius: 5px; width: 100px; color: #BE4C4C; margin: 0px 0px 0px 5px;" href="'.BASEURL.'/C_Admin/update_konten/'.$row['id_konten'].'/'.$row['id_role'].'" >DELETE</a>
-                        </div>
+                        </div>';}
+                        echo'
                         <br>
                         <p class="card-text">
                             Tag:

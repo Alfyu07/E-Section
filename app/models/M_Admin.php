@@ -67,6 +67,12 @@ class M_Admin{
 		return $hasil;
 	}
 
+	public function deleteArtikel($id){
+		$que = "DELETE from artikel WHERE id_artikel='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
 	public function input_test($data, $id){
 		$judul = $data['judul'];
 		$desc = $data['desc'];
@@ -97,7 +103,7 @@ class M_Admin{
 	}
 
 	public function get_soal_byId($id_judul){
-		$que = "SELECT pertanyaan FROM soal WHERE id_judul='$id_judul'";
+		$que = "SELECT * FROM soal WHERE id_judul='$id_judul'";
 		$hasil = $this->koneksi->exec($que);
 		return $hasil;
 	}
@@ -177,7 +183,7 @@ class M_Admin{
 		$tag = $data['tag'];
 		$que = "UPDATE artikel SET judul='$judul', source='$source', materi='$materi', fakta='$fakta', tag='$tag' WHERE id_artikel='$id_konten'";
 		$hasil = $this->koneksi->exec($que);
-		return $que;
+		return $hasil;
 	}
 
 	public function get_scArtikel($data){
@@ -226,6 +232,28 @@ class M_Admin{
 		$data['jum']=mysqli_num_rows($hasil);
 		return $data;
 	}
+
+	public function get_test_byId($data){
+		$que = "SELECT * FROM judul_soal WHERE id_judul='$data'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function updateTest($data){
+		$id_judul = $data['id_judul'];
+		$judul = $data['judul'];
+		$desc = $data['desc'];
+		$que = "UPDATE judul_soal SET judul='$judul', deskripsi='$desc' WHERE id_judul='$id_judul'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
+	public function deleteTest($id){
+		$que = "DELETE from judul_soal WHERE id_judul='$id'";
+		$hasil = $this->koneksi->exec($que);
+		return $hasil;
+	}
+
 }
 
 
