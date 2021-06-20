@@ -163,7 +163,7 @@
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_konten/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
-                            <?php if ($_SESSION['id_role']==3){ ?> 
+                            <?php if ($_SESSION['id_role']<=3){ ?> 
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
                             <a href="<?=BASEURL?>/C_User/list_konten/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
@@ -184,7 +184,7 @@
                             <img src="<?=BASEURL?>/img/Anak.png" width="50px" height="50px" style="margin-right: 30px;">
                             <a href="<?=BASEURL?>/C_User/list_artikel/4" style="left: 60%;">Anak</a> <br>
                             <div class="dropdown-divider"></div>
-                            <?php if ($_SESSION['id_role']==3){ ?> 
+                            <?php if ($_SESSION['id_role']<=3){ ?> 
                             <img src="<?=BASEURL?>/img/Remaja.png" width="50px" height="50px" style="margin-right: 30px ;">
                             <a href="<?=BASEURL?>/C_User/list_artikel/3" style="left: 60%;">Remaja</a> <br>
                             <div class="dropdown-divider"></div>
