@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <title><?= $_SESSION['id_role'];?></title>
     <link rel="stylesheet" type="text/css" href="<?=BASEURL?>/css/style.css">
