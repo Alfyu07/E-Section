@@ -367,6 +367,24 @@ class C_Admin extends Controller{
 			header('location: '.BASEURL.'/C_Admin/list_test/'.$role);
 		}
 	}
+
+	public function policy(){
+		$this->view('templates/nav');
+		$this->view('home/policy');
+		$this->view('templates/footer');
+	}
+
+	public function about(){
+		$this->view('templates/nav');
+		$this->view('home/about');
+		$this->view('templates/footer');
+	}
+
+	public function contact(){
+		$this->view('templates/nav');
+		$this->view('home/contact_us');
+		$this->view('templates/footer');
+	}
 }
 
 ?>
